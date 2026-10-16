@@ -1,0 +1,1139 @@
+{
+  "protocol_id": "quality-v2",
+  "generated_utc": "2026-10-14T13:49:38.601840+00:00",
+  "phase": "final",
+  "overall_status": "PARTIAL",
+  "primary_seed": 42,
+  "test_seed_selection": false,
+  "gates": {
+    "NYU segmentation": {
+      "status": "passed",
+      "scope": "primary42 original-resolution valid-pixel NYU test, identical V1 rescore",
+      "values": {
+        "mIoU": 0.27309291945638603,
+        "target": 0.2,
+        "absolute_gain_vs_v1": 0.2214641103143777,
+        "gain_target": 0.05
+      }
+    },
+    "JAAD detection": {
+      "status": "passed",
+      "scope": "primary42 fresh clip-disjoint JAAD test; original decoded pixels",
+      "values": {
+        "AP": 0.14813655493264866,
+        "target": 0.1,
+        "absolute_gain_vs_COCO": 0.09268184176029097,
+        "gain_target": 0.03
+      }
+    },
+    "MOT17 detection": {
+      "status": "passed",
+      "scope": "primary42 all900frames of one external shopping-mall recording",
+      "values": {
+        "AP50": 0.49138682524631655,
+        "target": 0.35
+      }
+    },
+    "MOT17 tracking": {
+      "status": "failed",
+      "scope": "same detector outputs, all900frames, independent local identity evaluator",
+      "values": {
+        "IDF1": 0.3230335525952131,
+        "target": 0.4,
+        "legacy_IDF1": 0.29047389944671637,
+        "ID_switch": 264,
+        "legacy_ID_switch": 238
+      }
+    },
+    "fixture forecasting": {
+      "status": "passed",
+      "scope": "primary42 shared causal observed histories; conditional error must be read with coverage; domains separate",
+      "values": {
+        "ADE_ratio_vs_LS_CV": 0.3302351480542,
+        "target_maximum_ratio": 0.95,
+        "MLP_ADE2": 0.029685979709029198,
+        "LS_CV_ADE2": 0.089893458900253,
+        "MLP_FDE2": 0.06545408070087433,
+        "LS_CV_FDE2": 0.20667503520100866,
+        "last2_CV_ADE2": 0.09751586586523633,
+        "last2_CV_FDE2": 0.2097048729124976,
+        "ADE_ratio_vs_last2_CV": 0.3044220491263876,
+        "coverage": {
+          "all_renderer_actor_windows": 1248,
+          "matched_observed_history_windows": 1248,
+          "coverage_fraction": 1.0,
+          "unavailable_observed_history_windows": 0
+        },
+        "coverage_evidence": {
+          "path": "reports/v2/forecast/fixture-coverage-provenance.json",
+          "sha256": "c9e7b761eb58608547a9360a39b760bbde4d7a9c1e6520e813a043d2d8a3cbb9"
+        },
+        "unit": "metres"
+      }
+    },
+    "jaad forecasting": {
+      "status": "passed",
+      "scope": "primary42 shared causal observed histories; conditional error must be read with coverage; domains separate",
+      "values": {
+        "ADE_ratio_vs_LS_CV": 0.8235998413419559,
+        "target_maximum_ratio": 0.95,
+        "MLP_ADE2": 0.047828078269958496,
+        "LS_CV_ADE2": 0.05807198577409686,
+        "MLP_FDE2": 0.10300678014755249,
+        "LS_CV_FDE2": 0.12239865522016384,
+        "last2_CV_ADE2": 0.05287876580458628,
+        "last2_CV_FDE2": 0.11295931199218222,
+        "ADE_ratio_vs_last2_CV": 0.9044855253752967,
+        "coverage": {
+          "train": {
+            "all_annotated_eligible_windows": 1919,
+            "matched_observed_history_windows": 1040,
+            "coverage_fraction": 0.5419489317352788,
+            "matched_anchor_insufficientpast": 605
+          },
+          "val": {
+            "all_annotated_eligible_windows": 237,
+            "matched_observed_history_windows": 121,
+            "coverage_fraction": 0.510548523206751,
+            "matched_anchor_insufficientpast": 79
+          },
+          "test": {
+            "all_annotated_eligible_windows": 755,
+            "matched_observed_history_windows": 276,
+            "coverage_fraction": 0.3655629139072848,
+            "matched_anchor_insufficientpast": 217
+          }
+        },
+        "coverage_evidence": null,
+        "unit": "normalized_image"
+      }
+    },
+    "Simulation clear goals": {
+      "status": "passed",
+      "scope": "pre-existing clear/empty-corridor gate only; other scenario rates remain explicit",
+      "values": {
+        "clear_goal_rate": 1.0,
+        "target": 0.9,
+        "all_scenario_goal_rates": {
+          "clear": 1.0,
+          "crossing_actor": 1.0,
+          "depth_loss": 1.0,
+          "occlusion": 0.7,
+          "slow_inference": 1.0,
+          "static_obstacle": 1.0
+        },
+        "unexpected_contact_episodes": 0,
+        "contact_sampling": "every5msphysics step",
+        "exposed_seed_revalidation": true
+      }
+    },
+    "Simulation contact check": {
+      "status": "passed",
+      "scope": "60episodes, every physics step; recorded caster correction/instrumentation revalidation",
+      "values": {
+        "unexpected_contacts": 0,
+        "target": 0
+      }
+    }
+  },
+  "repeated_seed_statistics": {
+    "semantic": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metric": "mIoU",
+      "mean": 0.2809870008271803,
+      "sample_SD": 0.007251833281424484,
+      "scope": "descriptive seed variability; not calibrated uncertainty or a confidence interval"
+    },
+    "detection": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metric": "AP",
+      "mean": 0.15100629175473176,
+      "sample_SD": 0.003665345080985421,
+      "scope": "descriptive seed variability; not calibrated uncertainty or a confidence interval"
+    },
+    "detection_mot17": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metric": "AP50",
+      "mean": 0.4891777755042439,
+      "sample_SD": 0.004016765711506693,
+      "scope": "one external recording; descriptive seed variability"
+    },
+    "detection_mot17_AP": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "metric": "AP",
+      "mean": 0.23415224132950993,
+      "sample_SD": 0.004115448138517599,
+      "scope": "one external recording; descriptive seed variability"
+    },
+    "forecast_fixture": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "ADE2_mean": 0.02930019423365593,
+      "ADE2_sample_SD": 0.0008211762785318364,
+      "FDE2_mean": 0.06448835134506226,
+      "FDE2_sample_SD": 0.0020206167930938417,
+      "unit": "metres"
+    },
+    "forecast_jaad": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "ADE2_mean": 0.04787262777487437,
+      "ADE2_sample_SD": 0.0002203095204512656,
+      "FDE2_mean": 0.10306813071171443,
+      "FDE2_sample_SD": 0.000689845716617059,
+      "unit": "normalized_image"
+    }
+  },
+  "metric_rows": [
+    {
+      "dataset": "nyu",
+      "model": "semantic-S3-seed42",
+      "seed": 42,
+      "metric": "mIoU",
+      "value": 0.27309291945638603,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "nyu",
+      "model": "semantic-S3-seed43",
+      "seed": 43,
+      "metric": "mIoU",
+      "value": 0.2873530692976669,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "nyu",
+      "model": "semantic-S3-seed44",
+      "seed": 44,
+      "metric": "mIoU",
+      "value": 0.282515013727488,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "nyu",
+      "model": "segmentation-trained",
+      "seed": null,
+      "metric": "mIoU",
+      "value": 0.05162880914200831,
+      "unit": "fraction",
+      "role": "historical_v1"
+    },
+    {
+      "dataset": "nyu",
+      "model": "segmentation-initial",
+      "seed": null,
+      "metric": "mIoU",
+      "value": 0.006198157451109323,
+      "unit": "fraction",
+      "role": "initial_or_train_majority"
+    },
+    {
+      "dataset": "nyu",
+      "model": "semantic-S3-seed42-initial",
+      "seed": null,
+      "metric": "mIoU",
+      "value": 0.004290000878311581,
+      "unit": "fraction",
+      "role": "initial_or_train_majority"
+    },
+    {
+      "dataset": "nyu",
+      "model": "semantic-S3-seed42-train-majority",
+      "seed": null,
+      "metric": "mIoU",
+      "value": 0.00639019949354464,
+      "unit": "fraction",
+      "role": "initial_or_train_majority"
+    },
+    {
+      "dataset": "hypersim",
+      "model": "semantic-S3-seed42",
+      "seed": 42,
+      "metric": "mIoU",
+      "value": 0.08623900254308418,
+      "unit": "fraction",
+      "role": "separate_synthetic_domain"
+    },
+    {
+      "dataset": "hypersim",
+      "model": "segmentation-trained",
+      "seed": null,
+      "metric": "mIoU",
+      "value": 0.04455502318024266,
+      "unit": "fraction",
+      "role": "historical_synthetic_domain"
+    },
+    {
+      "dataset": "jaad",
+      "model": "detection-D3-seed42",
+      "seed": 42,
+      "metric": "AP",
+      "value": 0.14813655493264866,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "detection-D3-seed42",
+      "seed": 42,
+      "metric": "AP50",
+      "value": 0.38412870887562767,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "detection-D3-seed43",
+      "seed": 43,
+      "metric": "AP",
+      "value": 0.15513526715913667,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "detection-D3-seed43",
+      "seed": 43,
+      "metric": "AP50",
+      "value": 0.38785625977525795,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "detection-D3-seed44",
+      "seed": 44,
+      "metric": "AP",
+      "value": 0.14974705317241,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "detection-D3-seed44",
+      "seed": 44,
+      "metric": "AP50",
+      "value": 0.37674377740009385,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "detection-baseline",
+      "seed": null,
+      "metric": "AP",
+      "value": 0.055454713172357686,
+      "unit": "fraction",
+      "role": "COCO"
+    },
+    {
+      "dataset": "jaad",
+      "model": "detection-baseline",
+      "seed": null,
+      "metric": "AP50",
+      "value": 0.1714096930937855,
+      "unit": "fraction",
+      "role": "COCO"
+    },
+    {
+      "dataset": "jaad",
+      "model": "detection-trained",
+      "seed": null,
+      "metric": "AP",
+      "value": 0.06736647181676197,
+      "unit": "fraction",
+      "role": "historical_v1"
+    },
+    {
+      "dataset": "jaad",
+      "model": "detection-trained",
+      "seed": null,
+      "metric": "AP50",
+      "value": 0.19285185347070405,
+      "unit": "fraction",
+      "role": "historical_v1"
+    },
+    {
+      "dataset": "jaad",
+      "model": "detection-D3-seed42-initial",
+      "seed": null,
+      "metric": "AP",
+      "value": 0.13304180295382476,
+      "unit": "fraction",
+      "role": "selected_pretrained_initialization"
+    },
+    {
+      "dataset": "jaad",
+      "model": "detection-D3-seed42-initial",
+      "seed": null,
+      "metric": "AP50",
+      "value": 0.3327939604838873,
+      "unit": "fraction",
+      "role": "selected_pretrained_initialization"
+    },
+    {
+      "dataset": "mot17",
+      "model": "detection-D3-seed42",
+      "seed": 42,
+      "metric": "AP",
+      "value": 0.22943258373829073,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "mot17",
+      "model": "detection-D3-seed42",
+      "seed": 42,
+      "metric": "AP50",
+      "value": 0.49138682524631655,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "mot17",
+      "model": "detection-D3-seed43",
+      "seed": 43,
+      "metric": "AP",
+      "value": 0.23603192686830624,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "mot17",
+      "model": "detection-D3-seed43",
+      "seed": 43,
+      "metric": "AP50",
+      "value": 0.4916051737933177,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "mot17",
+      "model": "detection-D3-seed44",
+      "seed": 44,
+      "metric": "AP",
+      "value": 0.2369922133819328,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "mot17",
+      "model": "detection-D3-seed44",
+      "seed": 44,
+      "metric": "AP50",
+      "value": 0.4845413274730974,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "mot17",
+      "model": "detection-baseline",
+      "seed": null,
+      "metric": "AP",
+      "value": 0.24665093223020407,
+      "unit": "fraction",
+      "role": "COCO"
+    },
+    {
+      "dataset": "mot17",
+      "model": "detection-baseline",
+      "seed": null,
+      "metric": "AP50",
+      "value": 0.5017893029667833,
+      "unit": "fraction",
+      "role": "COCO"
+    },
+    {
+      "dataset": "mot17",
+      "model": "legacy-v1",
+      "seed": null,
+      "metric": "IDF1",
+      "value": 0.29047389944671637,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "mot17",
+      "model": "T1",
+      "seed": null,
+      "metric": "IDF1",
+      "value": 0.2986528746692326,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "mot17",
+      "model": "T2",
+      "seed": null,
+      "metric": "IDF1",
+      "value": 0.3230335525952131,
+      "unit": "fraction",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_position",
+      "seed": 42,
+      "metric": "ADE2",
+      "value": 0.1454815741154734,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_position",
+      "seed": 42,
+      "metric": "FDE2",
+      "value": 0.27048013183091413,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_velocity_last2",
+      "seed": 42,
+      "metric": "ADE2",
+      "value": 0.09751586586523633,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_velocity_last2",
+      "seed": 42,
+      "metric": "FDE2",
+      "value": 0.2097048729124976,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_velocity_LS",
+      "seed": 42,
+      "metric": "ADE2",
+      "value": 0.089893458900253,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_velocity_LS",
+      "seed": 42,
+      "metric": "FDE2",
+      "value": 0.20667503520100866,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "residual_MLP",
+      "seed": 42,
+      "metric": "ADE2",
+      "value": 0.029685979709029198,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "residual_MLP",
+      "seed": 42,
+      "metric": "FDE2",
+      "value": 0.06545408070087433,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_position",
+      "seed": 43,
+      "metric": "ADE2",
+      "value": 0.1454815741154734,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_position",
+      "seed": 43,
+      "metric": "FDE2",
+      "value": 0.27048013183091413,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_velocity_last2",
+      "seed": 43,
+      "metric": "ADE2",
+      "value": 0.09751586586523633,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_velocity_last2",
+      "seed": 43,
+      "metric": "FDE2",
+      "value": 0.2097048729124976,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_velocity_LS",
+      "seed": 43,
+      "metric": "ADE2",
+      "value": 0.089893458900253,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_velocity_LS",
+      "seed": 43,
+      "metric": "FDE2",
+      "value": 0.20667503520100866,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "residual_MLP",
+      "seed": 43,
+      "metric": "ADE2",
+      "value": 0.029857439920306206,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "residual_MLP",
+      "seed": 43,
+      "metric": "FDE2",
+      "value": 0.06584489345550537,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_position",
+      "seed": 44,
+      "metric": "ADE2",
+      "value": 0.1454815741154734,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_position",
+      "seed": 44,
+      "metric": "FDE2",
+      "value": 0.27048013183091413,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_velocity_last2",
+      "seed": 44,
+      "metric": "ADE2",
+      "value": 0.09751586586523633,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_velocity_last2",
+      "seed": 44,
+      "metric": "FDE2",
+      "value": 0.2097048729124976,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_velocity_LS",
+      "seed": 44,
+      "metric": "ADE2",
+      "value": 0.089893458900253,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "constant_velocity_LS",
+      "seed": 44,
+      "metric": "FDE2",
+      "value": 0.20667503520100866,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "residual_MLP",
+      "seed": 44,
+      "metric": "ADE2",
+      "value": 0.028357163071632385,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "fixture",
+      "model": "residual_MLP",
+      "seed": 44,
+      "metric": "FDE2",
+      "value": 0.06216607987880707,
+      "unit": "metres",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_position",
+      "seed": 42,
+      "metric": "ADE2",
+      "value": 0.07660456217703297,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_position",
+      "seed": 42,
+      "metric": "FDE2",
+      "value": 0.1538303841758943,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_velocity_last2",
+      "seed": 42,
+      "metric": "ADE2",
+      "value": 0.05287876580458628,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_velocity_last2",
+      "seed": 42,
+      "metric": "FDE2",
+      "value": 0.11295931199218222,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_velocity_LS",
+      "seed": 42,
+      "metric": "ADE2",
+      "value": 0.05807198577409686,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_velocity_LS",
+      "seed": 42,
+      "metric": "FDE2",
+      "value": 0.12239865522016384,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "residual_MLP",
+      "seed": 42,
+      "metric": "ADE2",
+      "value": 0.047828078269958496,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "residual_MLP",
+      "seed": 42,
+      "metric": "FDE2",
+      "value": 0.10300678014755249,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_position",
+      "seed": 43,
+      "metric": "ADE2",
+      "value": 0.07660456217703297,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_position",
+      "seed": 43,
+      "metric": "FDE2",
+      "value": 0.1538303841758943,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_velocity_last2",
+      "seed": 43,
+      "metric": "ADE2",
+      "value": 0.05287876580458628,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_velocity_last2",
+      "seed": 43,
+      "metric": "FDE2",
+      "value": 0.11295931199218222,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_velocity_LS",
+      "seed": 43,
+      "metric": "ADE2",
+      "value": 0.05807198577409686,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_velocity_LS",
+      "seed": 43,
+      "metric": "FDE2",
+      "value": 0.12239865522016384,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "residual_MLP",
+      "seed": 43,
+      "metric": "ADE2",
+      "value": 0.04767799749970436,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "residual_MLP",
+      "seed": 43,
+      "metric": "FDE2",
+      "value": 0.10241100937128067,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_position",
+      "seed": 44,
+      "metric": "ADE2",
+      "value": 0.07660456217703297,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_position",
+      "seed": 44,
+      "metric": "FDE2",
+      "value": 0.1538303841758943,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_velocity_last2",
+      "seed": 44,
+      "metric": "ADE2",
+      "value": 0.05287876580458628,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_velocity_last2",
+      "seed": 44,
+      "metric": "FDE2",
+      "value": 0.11295931199218222,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_velocity_LS",
+      "seed": 44,
+      "metric": "ADE2",
+      "value": 0.05807198577409686,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "constant_velocity_LS",
+      "seed": 44,
+      "metric": "FDE2",
+      "value": 0.12239865522016384,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "residual_MLP",
+      "seed": 44,
+      "metric": "ADE2",
+      "value": 0.04811180755496025,
+      "unit": "normalized_image",
+      "role": "trained"
+    },
+    {
+      "dataset": "jaad",
+      "model": "residual_MLP",
+      "seed": 44,
+      "metric": "FDE2",
+      "value": 0.10378660261631012,
+      "unit": "normalized_image",
+      "role": "trained"
+    }
+  ],
+  "measurement_evidence": [
+    {
+      "path": "reports/v2/semantic-heldout-complete.json",
+      "sha256": "d883079024720332328d879940ba942fd867b2c93a0e4f1c7d01ac96657a6dd6"
+    },
+    {
+      "path": "reports/v2/detection-heldout-complete.json",
+      "sha256": "d612de6bc1fee44109a6118de51964bf8c23be88e90866d12621ca7b98238351"
+    },
+    {
+      "path": "models/v2/selection-semantic.json",
+      "sha256": "d72b9251a51829ee082bb6139597045ce26fda65bdba2d4167ed16ab4804723b"
+    },
+    {
+      "path": "reports/v2/semantic-nyu-test-semantic-S3-seed42.json",
+      "sha256": "fe0a0a238a4fbd8342739862737b4e8e56060f33ce60acca60ca03bbee2bd928"
+    },
+    {
+      "path": "reports/v2/semantic-nyu-test-semantic-S3-seed43.json",
+      "sha256": "7a6a3f8d6f047fda5e5e8e1719826a3ac7a6b9a6abcef6b290df8977bc5037ba"
+    },
+    {
+      "path": "reports/v2/semantic-nyu-test-semantic-S3-seed44.json",
+      "sha256": "5e3d64bec6dea2a6f4a08f5972f5388dfdcee77363f23516a5976453c667e530"
+    },
+    {
+      "path": "reports/v2/semantic-nyu-test-segmentation-trained.json",
+      "sha256": "942c6a2fbc22b8343ad436f7dd31654791286db0334babec495e9fdc0f034984"
+    },
+    {
+      "path": "reports/v2/semantic-nyu-test-segmentation-initial.json",
+      "sha256": "ba2f2d4c9544419186fea5502b27c8c072a51ff0a619edb1abcaa631a01386b3"
+    },
+    {
+      "path": "reports/v2/semantic-nyu-test-semantic-S3-seed42-initial.json",
+      "sha256": "26eed2f4abdefd0c9c26a789bd54bc3d3eed2d88bf4a992e24a28d9d8514e482"
+    },
+    {
+      "path": "reports/v2/semantic-nyu-test-semantic-S3-seed42-train-majority.json",
+      "sha256": "4b5309fa7b9add4ac5759736953ee5a550559cefdede65d8661748df8b085f35"
+    },
+    {
+      "path": "reports/v2/semantic-hypersim-test-semantic-S3-seed42.json",
+      "sha256": "21b1cfbcda1395a669865a7b19209e9ab47521b7672e701c147c957b66f881ef"
+    },
+    {
+      "path": "reports/v2/semantic-hypersim-test-segmentation-trained.json",
+      "sha256": "83ccace8eba5e4ead68d1eab770d51e254b5e8afd902b31b6a5e92aebe779d01"
+    },
+    {
+      "path": "models/v2/selection-detection.json",
+      "sha256": "3afc5aa89e4ed8172bce683fac0388f38f286a0abfba88b987efda226cc158e5"
+    },
+    {
+      "path": "reports/v2/detection-jaad-test-detection-D3-seed42.json",
+      "sha256": "33412a10b8a0485e1b7c94a5e4263a64141313c8bfc6f1f358f48af056d0d67f"
+    },
+    {
+      "path": "reports/v2/detection-jaad-test-detection-D3-seed43.json",
+      "sha256": "0088048898eb96baa7a9721bdc33b9c68162ac944900af6305b5f44fb6afca73"
+    },
+    {
+      "path": "reports/v2/detection-jaad-test-detection-D3-seed44.json",
+      "sha256": "c8d9c7c438e9afa0451ee04f1809f616e35f663cf7105bff060aacfc901376b7"
+    },
+    {
+      "path": "reports/v2/detection-jaad-test-detection-baseline.json",
+      "sha256": "5c39227218367e140293d345640f8f9c537f280d59180fcfcca48bef9181784e"
+    },
+    {
+      "path": "reports/v2/detection-jaad-test-detection-trained.json",
+      "sha256": "1c21a76d4e10da7be54da6d88a7af9869503d4f7a51ed0481fb3aab71454e9fe"
+    },
+    {
+      "path": "reports/v2/detection-jaad-test-detection-D3-seed42-initial.json",
+      "sha256": "0f1973959662f989eadeb8acee4dc5c8c1e87ebb88ad368779667205dee99f9b"
+    },
+    {
+      "path": "reports/v2/detection-mot17-test-detection-D3-seed42.json",
+      "sha256": "49017866d5f6cc0d3fb8e26a80d5a3266b589d17f1f04cdeee93fc2d80adf2d4"
+    },
+    {
+      "path": "reports/v2/detection-mot17-test-detection-D3-seed43.json",
+      "sha256": "62dfbd1ca21057df4504fea5ebb31d161c1e360f6092595dfb4c29563e65b459"
+    },
+    {
+      "path": "reports/v2/detection-mot17-test-detection-D3-seed44.json",
+      "sha256": "7bf2e5f2738e658c28e25dd97c2a59be54212001e182db17fbf165eba32ee41d"
+    },
+    {
+      "path": "reports/v2/detection-mot17-test-detection-baseline.json",
+      "sha256": "c432a0639eb4e69aa5ba67da30906fd264a3a99b2bf770877a77fca10131e282"
+    },
+    {
+      "path": "reports/v2/tracking/mot17-heldout.json",
+      "sha256": "2fa4f404e42c9b5ac398ce6b3b703b8474dd24c10969bc0f7b9ab8e94e1e1099"
+    },
+    {
+      "path": "reports/v2/forecast/fixture-evaluation-provenance-replay.json",
+      "sha256": "021fade6dfef4e93a038ebf18ffcfe67cfdf1f3a4eb5c4d8c3b169b2e936292d"
+    },
+    {
+      "path": "reports/v2/forecast/full-source-provenance-replay-v2.json",
+      "sha256": "89e0ce9685a5e95300485175d58856e6463ebc5cb0e40e766af1e82fcd09d011"
+    },
+    {
+      "path": "reports/v2/forecast/fixture-test-seed42-provenance-replay-v2.json",
+      "sha256": "68272dc4a65892f22400874abaaad72e018ba528bad50051546f4d73a9870c8a"
+    },
+    {
+      "path": "reports/v2/forecast/evaluations/20261014T112416Z-evaluate-fixture-test-043761/run.json",
+      "sha256": "227c85f1a67a971107c42fd6a455f8137a48e20f1201061c3c1cd08f5e9153d6"
+    },
+    {
+      "path": "reports/v2/forecast/fixture-test-seed42.json",
+      "sha256": "eb1a955e0f5fd95c29cd1b13dfadb1dd76ac78c817678124d602da92efc2f748"
+    },
+    {
+      "path": "reports/v2/forecast/full-source-provenance-replay-v2.json",
+      "sha256": "89e0ce9685a5e95300485175d58856e6463ebc5cb0e40e766af1e82fcd09d011"
+    },
+    {
+      "path": "reports/v2/forecast/fixture-test-seed43-provenance-replay-v2.json",
+      "sha256": "7d055c58f8b387f7d96539bcb48d00441833cf567804d79f531ce92603ef85e6"
+    },
+    {
+      "path": "reports/v2/forecast/evaluations/20261014T112434Z-evaluate-fixture-test-d922dc/run.json",
+      "sha256": "c9956d93efdb07d1638d0cc764cb4ec9f9955e2add3620d2a8dd1686a275b127"
+    },
+    {
+      "path": "reports/v2/forecast/fixture-test-seed43.json",
+      "sha256": "26d032ebcac72044442f620c7be9af277c6b0712b3ecda894b8884725714ed81"
+    },
+    {
+      "path": "reports/v2/forecast/full-source-provenance-replay-v2.json",
+      "sha256": "89e0ce9685a5e95300485175d58856e6463ebc5cb0e40e766af1e82fcd09d011"
+    },
+    {
+      "path": "reports/v2/forecast/fixture-test-seed44-provenance-replay-v2.json",
+      "sha256": "ff52d9006e3eb07154bc8acd85e8a5555fde5a92d70bef6fc97837ead1c00630"
+    },
+    {
+      "path": "reports/v2/forecast/evaluations/20261014T112445Z-evaluate-fixture-test-bb371a/run.json",
+      "sha256": "960dcaf5097213aa50da69d004cf67bad0336554a55d13672a541641b4435836"
+    },
+    {
+      "path": "reports/v2/forecast/fixture-test-seed44.json",
+      "sha256": "95820d19a430871e45d431d77c173de759b2d81d9a3dfd6b4f7b312b0b485ded"
+    },
+    {
+      "path": "reports/v2/forecast/fixture-coverage-provenance.json",
+      "sha256": "c9e7b761eb58608547a9360a39b760bbde4d7a9c1e6520e813a043d2d8a3cbb9"
+    },
+    {
+      "path": "reports/v2/forecast/full-source-provenance-replay-v2.json",
+      "sha256": "89e0ce9685a5e95300485175d58856e6463ebc5cb0e40e766af1e82fcd09d011"
+    },
+    {
+      "path": "reports/v2/forecast/jaad-test-seed42-provenance-replay-v2.json",
+      "sha256": "c5c26b7fabcf360f195ec64a87c997c63a80afea2b51e86233132dd97d50a7f0"
+    },
+    {
+      "path": "reports/v2/forecast/evaluations/20261014T112450Z-evaluate-jaad-test-011193/run.json",
+      "sha256": "638bc47de1031741fcdce342ba6d3df85580f64500b96c7fd689cd6f4ded129c"
+    },
+    {
+      "path": "reports/v2/forecast/jaad-test-seed42.json",
+      "sha256": "5a26b03de05e01b1abc433c275784c3dd46c34e2f9fdfd7b3eb876d3810f3a89"
+    },
+    {
+      "path": "reports/v2/forecast/full-source-provenance-replay-v2.json",
+      "sha256": "89e0ce9685a5e95300485175d58856e6463ebc5cb0e40e766af1e82fcd09d011"
+    },
+    {
+      "path": "reports/v2/forecast/jaad-test-seed43-provenance-replay-v2.json",
+      "sha256": "7aae9f631cc3bb39a8a6f801ee757b780e4432578e30b3e54137c33899b1240e"
+    },
+    {
+      "path": "reports/v2/forecast/evaluations/20261014T112456Z-evaluate-jaad-test-848f4d/run.json",
+      "sha256": "1031faece143e2528434015cab8c3f7e169b906b97967319844e47d7d4f23469"
+    },
+    {
+      "path": "reports/v2/forecast/jaad-test-seed43.json",
+      "sha256": "fde2b01a9ba43e6b9984b51460bb53d20a00c06b35e5fd9919b0f82fa6443322"
+    },
+    {
+      "path": "reports/v2/forecast/full-source-provenance-replay-v2.json",
+      "sha256": "89e0ce9685a5e95300485175d58856e6463ebc5cb0e40e766af1e82fcd09d011"
+    },
+    {
+      "path": "reports/v2/forecast/jaad-test-seed44-provenance-replay-v2.json",
+      "sha256": "3ffe28c93d769a16e39ca4c02d8562ba86e69e5028afc07cfe3f1405fd8e6590"
+    },
+    {
+      "path": "reports/v2/forecast/evaluations/20261014T112500Z-evaluate-jaad-test-657e40/run.json",
+      "sha256": "fa8c754be207cf46490868c38ac5031c556e202ba53f148e5dba0cbc76d30c0e"
+    },
+    {
+      "path": "reports/v2/forecast/jaad-test-seed44.json",
+      "sha256": "944e1782aca56631d21d1091164d22da3b8c9de70a6b7779a14f5d4648db22c1"
+    },
+    {
+      "path": "reports/v2/robotics/simulation-contact-revalidation-200/summary.json",
+      "sha256": "098ae398ad8ab434d2acfa3141b55feced87ef393a572e62d3bdee21599acf18"
+    }
+  ],
+  "protocol_sha256": "e0be3e39f27f80720b6baa99c59dbcfec67b04077174afe108db225053a4a675",
+  "hardware_and_quality_scopes": "physical robot and embedded target remain unavailable; passing clear corridor does not erase occlusion failures"
+}

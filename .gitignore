@@ -1,0 +1,17 @@
+.venv/
+environments/
+cache/
+data/
+models/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+local-output/
+*.pt
+*.pth
+*.onnx
+*.bag
+*.mcap
+.DS_Store

@@ -1,0 +1,13 @@
+{
+  "model_pack": "fixture",
+  "backend": "native",
+  "device": "cpu",
+  "batch_size": 1,
+  "samples": 100,
+  "warmup": 10,
+  "repeats": 3,
+  "threads": 4,
+  "seed": 42,
+  "conditions": "all",
+  "timeout_seconds_per_repeat": 1200
+}

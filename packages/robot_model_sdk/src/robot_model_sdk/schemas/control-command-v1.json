@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ControlCommandV1",
+  "type": "object",
+  "required": ["schema_version", "timestamp_ns", "linear_mps", "angular_rps", "state", "reason", "safety_stop"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "timestamp_ns": {"type": "integer", "minimum": 0},
+    "linear_mps": {"type": "number"},
+    "angular_rps": {"type": "number"},
+    "state": {"type": "string", "minLength": 1},
+    "reason": {"type": "string", "minLength": 1},
+    "source_sample_id": {"type": ["string", "null"]},
+    "observed_result_age_ms": {"type": ["number", "null"], "minimum": 0},
+    "safety_stop": {"type": "boolean"}
+  },
+  "allOf": [{"if": {"properties": {"safety_stop": {"const": true}}}, "then": {"properties": {"linear_mps": {"const": 0}, "angular_rps": {"const": 0}}}}],
+  "additionalProperties": false
+}

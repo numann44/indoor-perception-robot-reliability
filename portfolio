@@ -1,0 +1,20 @@
+#!/bin/sh
+set -eu
+PORTFOLIO_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+export PORTFOLIO_ROOT="$PORTFOLIO_DIR"
+export PIP_CACHE_DIR="$PORTFOLIO_DIR/cache/pip"
+export XDG_CACHE_HOME="$PORTFOLIO_DIR/cache"
+export TORCH_HOME="$PORTFOLIO_DIR/cache/torch"
+export TORCHINDUCTOR_CACHE_DIR="$PORTFOLIO_DIR/cache/torchinductor"
+export TORCH_EXTENSIONS_DIR="$PORTFOLIO_DIR/cache/torch-extensions"
+export TRITON_CACHE_DIR="$PORTFOLIO_DIR/cache/triton"
+export MPLCONFIGDIR="$PORTFOLIO_DIR/cache/matplotlib"
+export TMPDIR="$PORTFOLIO_DIR/cache/tmp"
+export PYTHONDONTWRITEBYTECODE=1
+export PYTORCH_ENABLE_MPS_FALLBACK=0
+export PYTHONPATH="$PORTFOLIO_DIR/packages/robot_model_sdk/src:$PORTFOLIO_DIR/packages/indoor_perception_lab/src:$PORTFOLIO_DIR/packages/robot_reliability_bench/src${PYTHONPATH:+:$PYTHONPATH}"
+if [ "${1:-}" = "bootstrap" ] && [ ! -x "$PORTFOLIO_DIR/environments/main/bin/python" ]; then
+  if [ -x /opt/homebrew/bin/python3.12 ]; then PORTFOLIO_PYTHON=${PORTFOLIO_PYTHON:-/opt/homebrew/bin/python3.12}; else PORTFOLIO_PYTHON=${PORTFOLIO_PYTHON:-python3}; fi
+  exec "$PORTFOLIO_PYTHON" "$PORTFOLIO_DIR/tools/portfolio_cli.py" "$@"
+fi
+exec "$PORTFOLIO_DIR/environments/main/bin/python" "$PORTFOLIO_DIR/tools/portfolio_cli.py" "$@"

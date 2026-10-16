@@ -1,0 +1,292 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ModelManifestV1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "task",
+    "architecture",
+    "domain"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "task": {
+      "enum": [
+        "detection",
+        "semantic",
+        "forecast"
+      ]
+    },
+    "architecture": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "onnx_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "native_weights": {
+      "type": "string"
+    },
+    "onnx": {
+      "type": "string"
+    },
+    "class_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "input_size": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      }
+    },
+    "std": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      }
+    },
+    "protocol_id": {
+      "type": "string"
+    },
+    "preprocessing_id": {
+      "type": "string"
+    },
+    "architecture_parameters": {
+      "type": "object"
+    },
+    "architecture_backend_evidence": {
+      "type": "object"
+    },
+    "trained_backend_evidence": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "protocol_id": {
+            "const": "quality-v2"
+          }
+        },
+        "required": [
+          "protocol_id"
+        ]
+      },
+      "then": {
+        "required": [
+          "preprocessing_id"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "task": {
+                  "const": "semantic"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "postprocess",
+                "class_names",
+                "input_size",
+                "mean",
+                "std"
+              ],
+              "properties": {
+                "architecture": {
+                  "enum": [
+                    "mobilenet_v3_large_frozen_64decoder",
+                    "mobilenet_v3_multiscale_nyu40"
+                  ]
+                },
+                "class_names": {
+                  "const": [
+                    "wall",
+                    "floor",
+                    "cabinet",
+                    "bed",
+                    "chair",
+                    "sofa",
+                    "table",
+                    "door",
+                    "window",
+                    "bookshelf",
+                    "picture",
+                    "counter",
+                    "blinds",
+                    "desk",
+                    "shelves",
+                    "curtain",
+                    "dresser",
+                    "pillow",
+                    "mirror",
+                    "floor mat",
+                    "clothes",
+                    "ceiling",
+                    "books",
+                    "refrigerator",
+                    "television",
+                    "paper",
+                    "towel",
+                    "shower curtain",
+                    "box",
+                    "whiteboard",
+                    "person",
+                    "nightstand",
+                    "toilet",
+                    "sink",
+                    "lamp",
+                    "bathtub",
+                    "bag",
+                    "otherstructure",
+                    "otherfurniture",
+                    "otherprop"
+                  ]
+                },
+                "input_size": {
+                  "const": [
+                    240,
+                    320
+                  ]
+                },
+                "mean": {
+                  "const": [
+                    0.485,
+                    0.456,
+                    0.406
+                  ]
+                },
+                "std": {
+                  "const": [
+                    0.229,
+                    0.224,
+                    0.225
+                  ]
+                },
+                "preprocessing_id": {
+                  "const": "quality_rgb_v2"
+                },
+                "postprocess": {
+                  "const": "resize_logits_then_argmax"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "task": {
+                  "const": "detection"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "class_names",
+                "num_classes"
+              ],
+              "properties": {
+                "architecture": {
+                  "enum": [
+                    "ssdlite320_quality_v2",
+                    "fasterrcnn_mobilenet_v3_large_320_fpn_quality_v2"
+                  ]
+                },
+                "class_names": {
+                  "const": [
+                    "background",
+                    "person"
+                  ]
+                },
+                "num_classes": {
+                  "const": 2
+                },
+                "preprocessing_id": {
+                  "const": "torchvision_detection_transform"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "task": {
+                  "const": "forecast"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "network",
+                "preprocess",
+                "postprocess"
+              ],
+              "properties": {
+                "architecture": {
+                  "const": "residual_cv_mlp_2x64"
+                },
+                "preprocessing_id": {
+                  "const": "motion_center_scale_v2"
+                },
+                "network": {
+                  "const": {
+                    "history": 11,
+                    "future": 20,
+                    "hidden": 64
+                  }
+                },
+                "preprocess": {
+                  "properties": {
+                    "center_last": {
+                      "const": true
+                    }
+                  },
+                  "required": [
+                    "center_last"
+                  ]
+                },
+                "postprocess": {
+                  "properties": {
+                    "relative_to_last": {
+                      "const": true
+                    },
+                    "unscale": {
+                      "const": true
+                    }
+                  },
+                  "required": [
+                    "relative_to_last",
+                    "unscale"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

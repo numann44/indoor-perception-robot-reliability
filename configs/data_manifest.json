@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-10-14",
+  "budgets": {"cumulative_download_bytes": 8000000000, "dataset_download_limit": 7000000000, "project_bytes": 8000000000, "minimum_free_bytes": 15000000000, "decoded_jaad_cache_bytes": 200000000},
+  "jaad": {
+    "version": "JAAD_2.0",
+    "commit": "d2feeac998366e47ecc54e5533c8a3fa61141dda",
+    "archive_url": "https://data.nvision2.eecs.yorku.ca/JAAD_dataset/data/JAAD_clips.zip",
+    "video_license": "CC-BY-4.0 (current author repository); landing page instead says MIT; retain both statements",
+    "code_annotation_license": "MIT",
+    "detection_stride": 15,
+    "decode_width": 640,
+    "splits": {
+      "train": ["video_0001", "video_0027", "video_0060", "video_0094", "video_0133", "video_0161", "video_0191", "video_0219", "video_0248", "video_0275", "video_0312", "video_0346"],
+      "val": ["video_0002", "video_0089", "video_0217", "video_0306"],
+      "test": ["video_0005", "video_0115", "video_0238", "video_0344"]
+    }
+  },
+  "hypersim": {
+    "version": "v1",
+    "commit": "3463c5c4a75f3cbfc65ed31cfd6e87204b3a2254",
+    "archive_pattern": "https://docs-assets.developer.apple.com/ml-research/datasets/hypersim/v1/scenes/{scene}.zip",
+    "dataset_license": "CC-BY-SA-3.0",
+    "splits": {"train": ["ai_001_001", "ai_001_003", "ai_001_004"], "val": ["ai_003_010"], "test": ["ai_001_010", "ai_003_007"]},
+    "frames_default": [0,5,10,16,21,26,31,36,42,47,52,57,63,68,73,78,83,89,94,99],
+    "frame_exceptions": {
+      "ai_001_001": [0,5,10,15,20,26,31,37,42,47,52,57,63,68,73,79,84,89,94,99],
+      "ai_003_010": [0,5,10,16,21,28,33,38,43,48,53,58,63,68,73,79,84,89,94,99]
+    },
+    "depth_convention": "Euclidean optical-center ray distance in meters, not camera-Z",
+    "semantic_original_ids": "NYU40 1..40; -1 invalid; output training mask0..39 and255 ignore",
+    "decode_width": 384
+  },
+  "tum": {
+    "version": "RGB-D benchmark Freiburg3",
+    "dataset_license": "CC-BY-4.0",
+    "code_license": "BSD-2-Clause",
+    "max_timestamp_delta": 0.02,
+    "depth_scale": 5000.0,
+    "depth_convention": "optical camera-Z in meters after integer depth/5000",
+    "intrinsics": {"fx": 535.4, "fy": 539.2, "cx": 320.1, "cy": 247.6, "width": 640, "height": 480},
+    "archives": {
+      "rgbd_dataset_freiburg3_walking_static": "https://cvg.cit.tum.de/rgbd/dataset/freiburg3/rgbd_dataset_freiburg3_walking_static.tgz",
+      "rgbd_dataset_freiburg3_walking_xyz": "https://cvg.cit.tum.de/rgbd/dataset/freiburg3/rgbd_dataset_freiburg3_walking_xyz.tgz"
+    }
+  },
+  "terms_sources": {
+    "jaad_current_readme": "https://raw.githubusercontent.com/ykotseruba/JAAD/d2feeac998366e47ecc54e5533c8a3fa61141dda/README.md",
+    "jaad_license": "https://raw.githubusercontent.com/ykotseruba/JAAD/d2feeac998366e47ecc54e5533c8a3fa61141dda/LICENSE",
+    "jaad_york_landing": "https://data.nvision2.eecs.yorku.ca/JAAD_dataset/",
+    "hypersim_readme": "https://raw.githubusercontent.com/apple-aiml-research/ml-hypersim/3463c5c4a75f3cbfc65ed31cfd6e87204b3a2254/README.md",
+    "hypersim_toolkit_license": "https://raw.githubusercontent.com/apple-aiml-research/ml-hypersim/3463c5c4a75f3cbfc65ed31cfd6e87204b3a2254/LICENSE.txt",
+    "tum_landing": "https://cvg.cit.tum.de/data/datasets/rgbd-dataset",
+    "tum_file_formats": "https://cvg.cit.tum.de/data/datasets/rgbd-dataset/file_formats",
+    "tum_download_page": "https://cvg.cit.tum.de/data/datasets/rgbd-dataset/download"
+  }
+}

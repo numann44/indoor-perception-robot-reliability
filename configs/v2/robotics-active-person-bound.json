@@ -1,0 +1,51 @@
+{
+  "protocol_id": "matched-active-person-v1",
+  "frozen_before_selected_model_runs": true,
+  "seed_start": 200,
+  "seed_count": 10,
+  "scenarios": [
+    "clear",
+    "static_obstacle",
+    "crossing_actor",
+    "occlusion",
+    "depth_loss",
+    "slow_inference"
+  ],
+  "conditions": [
+    "geometric_with_matched_shadow_inference",
+    "geometry_plus_active_person_constraint"
+  ],
+  "episode_seconds": 35,
+  "threshold_source": "canonicaltracking.high_score",
+  "high_score": 0.4,
+  "tracker_lock": "models/v2/selection-tracking.json",
+  "model_pack": "models/v2/detection-D3-seed42",
+  "person_class_id": 1,
+  "minimum_valid_depth_pixels": 9,
+  "maximum_absolute_camera_x_m": 0.4,
+  "stop_axial_camera_z_m": 0.8,
+  "maximum_result_age_ms": 300,
+  "controller_sha256": "3fa654458231036ec2bbd68e4a3edc6d58df013e7b0ad5aa578847b8973f8101",
+  "constraint_source_sha256": "8aa03439f5613c9b85290fbb81442d3db08e443542a5f89c2ea69657bcdc5e40",
+  "inference_cadence_hz": 10,
+  "fresh_process_per_episode": true,
+  "causality": "measured RPC elapsed time delays observation availability in source clock; slow-inference scenario adds predeclared400ms delay",
+  "outcome": "paired goal/contact/clearance/fault-stop/recovery/time changes and eligible observations/actual command changes; zero influence is a valid outcome",
+  "dataset_scope": "controlled primitive capsule actor renderings are OOD; no physical robot conclusion",
+  "prior_geometric_seeds_exposed": true,
+  "comparison_scope": "matched measured contribution on authorized existing200\u2013209 seeds, not a new blind controller quality test",
+  "controller_tuning_allowed": false,
+  "forecasting": "disabled: worldXY simulation differs from worldXZ trained fixture",
+  "tracker_lock_sha256": "3358b861983dbded076679910eb60409a09f9f2d6eded372c3a71e40b32964c1",
+  "selected_tracker": "T2",
+  "selected_parameters": {
+    "kind": "two_stage",
+    "high_score": 0.4,
+    "low_score": 0.1,
+    "iou_threshold": 0.15
+  },
+  "detector_manifest_sha256": "fecb506928e1c42eeb81f911bcec8e2c25a1884dc134fe5b756fe01b66b2ff4a",
+  "detector_weights_sha256": "44f17da2cbc5972eec95383c1113c5005635c8670d9f5c9f50dfe3ae92acbe6c",
+  "tracker_source_sha256": "45d1537b763e58687cec189892b3770ac0af86c50403fd0e8a1668f762fe730d",
+  "bind_scope": "Exact canonical validation selection; no simulation outcomes used. No learned simulation has started."
+}

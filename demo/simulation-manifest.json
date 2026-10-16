@@ -1,0 +1,1657 @@
+{
+  "scope": "Original controlled-simulation panels only, sampled at original source time; no third-party research pixels. No target IDs/masks/physics truth or private runtime commands.",
+  "chapters": [
+    {
+      "id": "mujoco-depth-loss",
+      "label": "MuJoCo controlled simulation: depth_loss",
+      "duration_s": 23.0,
+      "processed_source_frames": 230,
+      "source_manifest_sha256": "ab99fe7c384daf5f60e67b3dea3bbfbb889a2a8bfcf0b8dbbe916577706962af",
+      "scene_sha256": "b3dddbbc08381efffe0dcc7c2e60b4e43d4c2df21bc444f7a8be822e838869da",
+      "role": "learned detection/tracking/semantic overlays; simulation command is geometric, not a control-contribution claim",
+      "frames": [
+        {
+          "time_s": 0.0,
+          "image_sha256": "6fede7c9d4fa9c906bf39e8ef529d72ec8c23280d9a3cbae3306de016cf7aa33",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.3,
+            "angular_rps": 0.0,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 648.2061249989783,
+          "original_panel_name": "mujoco-depth-loss/00000.png"
+        },
+        {
+          "time_s": 0.4,
+          "image_sha256": "54d45159818f44ebe77bc82351ab4fcfb9636b8641e1e69f1d00606277c15fed",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999999818617845,
+            "angular_rps": 0.0001649464261443967,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 57.370916998479515,
+          "original_panel_name": "mujoco-depth-loss/00004.png"
+        },
+        {
+          "time_s": 0.8,
+          "image_sha256": "c053fb36c0aa87ae95a04619318d3f5ed2c20beefd66f5954e7959c0469d5898",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999800833357,
+            "angular_rps": -0.0005465802480046911,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 58.86833400290925,
+          "original_panel_name": "mujoco-depth-loss/00008.png"
+        },
+        {
+          "time_s": 1.2,
+          "image_sha256": "6809ad37433068cff18b6a8bd9d88931a73488f08d98d48f23e120b708930f4e",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999999764248464,
+            "angular_rps": -0.00018804980857622944,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 61.10612500924617,
+          "original_panel_name": "mujoco-depth-loss/00012.png"
+        },
+        {
+          "time_s": 1.6,
+          "image_sha256": "c1f429f4591dfa8d3ddb424f7588dcda6f2d2b13bea774b1d62ee28d4d1e5125",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.299999998603913,
+            "angular_rps": 0.00014471110658309527,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 62.60433299758006,
+          "original_panel_name": "mujoco-depth-loss/00016.png"
+        },
+        {
+          "time_s": 2.0,
+          "image_sha256": "1c91cf88c5e5787c46ed512f3421bef88164cef51a8a6a1d8d5c70fd12b52683",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999999915689035,
+            "angular_rps": -0.00011245730025200018,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 69.08037500397768,
+          "original_panel_name": "mujoco-depth-loss/00020.png"
+        },
+        {
+          "time_s": 2.4,
+          "image_sha256": "6b93618d8b97850eeada5a3b2cbf5d3b7d830cb4ce67675f78c447f30fc48467",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999997206229,
+            "angular_rps": 6.473527504646803e-05,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 83.76124998903833,
+          "original_panel_name": "mujoco-depth-loss/00024.png"
+        },
+        {
+          "time_s": 2.8,
+          "image_sha256": "ee8c332e4cd3632432ab7b58fa3f6bb494f4a37c0182b1f82578747f5c025265",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999998345010875,
+            "angular_rps": -0.0004982452920909708,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 62.548417001380585,
+          "original_panel_name": "mujoco-depth-loss/00028.png"
+        },
+        {
+          "time_s": 3.2,
+          "image_sha256": "ea087be627d4e989addbeaf439d73f9e4458504573e5add295deb661c701664c",
+          "depth_available": false,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.0,
+            "state": "stopped",
+            "reason": "missing_depth",
+            "safety_stop": true
+          },
+          "observed_result_rpc_ms": 48.59275001217611,
+          "original_panel_name": "mujoco-depth-loss/00032.png"
+        },
+        {
+          "time_s": 3.6,
+          "image_sha256": "7311f8d960de436ea34dca72951d6f2456a01c13793f9b234e002921afe9c260",
+          "depth_available": false,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.0,
+            "state": "stopped",
+            "reason": "missing_depth",
+            "safety_stop": true
+          },
+          "observed_result_rpc_ms": 53.83954198623542,
+          "original_panel_name": "mujoco-depth-loss/00036.png"
+        },
+        {
+          "time_s": 4.0,
+          "image_sha256": "1d1c18f3da0fc09df41ad179acd70b38daee5c1b19215b6df371542dd576a0ed",
+          "depth_available": false,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.0,
+            "state": "stopped",
+            "reason": "missing_depth",
+            "safety_stop": true
+          },
+          "observed_result_rpc_ms": 55.80470799759496,
+          "original_panel_name": "mujoco-depth-loss/00040.png"
+        },
+        {
+          "time_s": 4.4,
+          "image_sha256": "cd081e30a197d0ab2f8bf23c61e0781be5e8ffa333b811db1ff8f8c0689c737f",
+          "depth_available": false,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.0,
+            "state": "stopped",
+            "reason": "missing_depth",
+            "safety_stop": true
+          },
+          "observed_result_rpc_ms": 51.14991699520033,
+          "original_panel_name": "mujoco-depth-loss/00044.png"
+        },
+        {
+          "time_s": 4.8,
+          "image_sha256": "c0b772d5d27ee909496ff67277ba1ae1e47c9dc3ef6fde9f2fd6e15b3039edcb",
+          "depth_available": false,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.0,
+            "state": "stopped",
+            "reason": "missing_depth",
+            "safety_stop": true
+          },
+          "observed_result_rpc_ms": 68.24304099427536,
+          "original_panel_name": "mujoco-depth-loss/00048.png"
+        },
+        {
+          "time_s": 5.2,
+          "image_sha256": "04b0a57892a116af6e63d95cb53a30e3fa5fcb376184b96d76f248ec79a4bc7f",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999913012705,
+            "angular_rps": -0.00036122146072692374,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 62.44683300610632,
+          "original_panel_name": "mujoco-depth-loss/00052.png"
+        },
+        {
+          "time_s": 5.6,
+          "image_sha256": "c941f5ad850afe0ee2814c87a897f0997deaa20d98f47525a53f42470dc46543",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999999568846,
+            "angular_rps": 2.543090703155393e-05,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 63.0492089985637,
+          "original_panel_name": "mujoco-depth-loss/00056.png"
+        },
+        {
+          "time_s": 6.0,
+          "image_sha256": "8c44c28a9fe63d07a6f2753eb23e4f80aed147d7ff6b008ecfa8f363db65eb27",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999999870401606,
+            "angular_rps": 0.00013942653691656481,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 70.14237499970477,
+          "original_panel_name": "mujoco-depth-loss/00060.png"
+        },
+        {
+          "time_s": 6.4,
+          "image_sha256": "822156ca11dbfe3d2cd22f02d26e0a06f1e3c2a6d2fb360a53b3fb642e4dbf58",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999996115505256,
+            "angular_rps": 0.0007633310055890075,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 88.33058399613947,
+          "original_panel_name": "mujoco-depth-loss/00064.png"
+        },
+        {
+          "time_s": 6.8,
+          "image_sha256": "749d2df1e648044b56aed77cf26e492fd04d54fecfa5ccf00a23d9ab05f16af8",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999995986902,
+            "angular_rps": 7.758638122101758e-05,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 83.1383330078097,
+          "original_panel_name": "mujoco-depth-loss/00068.png"
+        },
+        {
+          "time_s": 7.2,
+          "image_sha256": "7fa62f4749ea0673fb20653a7b5ed8942023234ad12bded43cf665630226c0a9",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999999962252294,
+            "angular_rps": -7.524729705066235e-05,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 94.83291700598784,
+          "original_panel_name": "mujoco-depth-loss/00072.png"
+        },
+        {
+          "time_s": 7.6,
+          "image_sha256": "1b52d4ac6f3a63b0ac48b4e1f3cb016f93119b12320cc791ad38f5329a73a875",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.299999992950333,
+            "angular_rps": 0.00032518456990349165,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 67.8757499990752,
+          "original_panel_name": "mujoco-depth-loss/00076.png"
+        },
+        {
+          "time_s": 8.0,
+          "image_sha256": "c5449542ca0b001efd80e1975025a862d4382d6fc914481b6dc5e701fed7344e",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999922304094,
+            "angular_rps": -0.00034138520710991216,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 71.66370899358299,
+          "original_panel_name": "mujoco-depth-loss/00080.png"
+        },
+        {
+          "time_s": 8.4,
+          "image_sha256": "ebf12d133e79695073abd80eae20366bd8d1ba2562df706f6d8efb81b357ec91",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999993822164,
+            "angular_rps": -9.62639814794386e-05,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 91.65808299439959,
+          "original_panel_name": "mujoco-depth-loss/00084.png"
+        },
+        {
+          "time_s": 8.8,
+          "image_sha256": "99a1d89b065a94748f07720931c95ad98b6b41879498d60de44ea9c88e2b8d22",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999965378262,
+            "angular_rps": -0.00022788726821598715,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 63.85183300881181,
+          "original_panel_name": "mujoco-depth-loss/00088.png"
+        },
+        {
+          "time_s": 9.2,
+          "image_sha256": "785746a473779d9e0a060723a3dd068274cc66ed393c0cacf38ca33df70ad4a1",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999996216604,
+            "angular_rps": 7.533321518060632e-05,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 71.38429200858809,
+          "original_panel_name": "mujoco-depth-loss/00092.png"
+        },
+        {
+          "time_s": 9.6,
+          "image_sha256": "c0c6c901a7e7aca51fd8b9c4db7bc01adf19ad4ea125be0046cb1048ec31a866",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999982251408,
+            "angular_rps": 0.00016316521716808197,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 71.23737499932759,
+          "original_panel_name": "mujoco-depth-loss/00096.png"
+        },
+        {
+          "time_s": 10.0,
+          "image_sha256": "6b9c7d67b5b1a7471ba22550d475416a0989184f4341767eadf9201229997c83",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999804055402,
+            "angular_rps": -0.0005421410327339782,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 63.104917004238814,
+          "original_panel_name": "mujoco-depth-loss/00100.png"
+        },
+        {
+          "time_s": 10.4,
+          "image_sha256": "9235d99465308c262727d16fd1981294e087e18b57451ecc55e4aa55faae4ed5",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999999936610683,
+            "angular_rps": 9.751101351840319e-05,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 59.30808400444221,
+          "original_panel_name": "mujoco-depth-loss/00104.png"
+        },
+        {
+          "time_s": 10.8,
+          "image_sha256": "ea1e5acfea2bfd74a6a6c6c77ff241f4f42390599c6d76e4bfb77c06e60e9236",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999981886306,
+            "angular_rps": 0.00016483489030982845,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 63.42804200539831,
+          "original_panel_name": "mujoco-depth-loss/00108.png"
+        },
+        {
+          "time_s": 11.2,
+          "image_sha256": "5d8c931bbf5ffef1fae9601218c7fa51858fb841238fd6325d1133a7e6615b4c",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999999974347746,
+            "angular_rps": -6.20309432612931e-05,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 62.25845799781382,
+          "original_panel_name": "mujoco-depth-loss/00112.png"
+        },
+        {
+          "time_s": 11.6,
+          "image_sha256": "19e1fff8df9b7b71817f1ccabd322e716f68e509b84126fba9d5d602c76296b0",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999999685728784,
+            "angular_rps": 0.00021711905187138392,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 62.95412499457598,
+          "original_panel_name": "mujoco-depth-loss/00116.png"
+        },
+        {
+          "time_s": 12.0,
+          "image_sha256": "fa185033c2d096a14b9d0b043e1aff523698d8f9e47b921cb74634301afb7ee5",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999945310132,
+            "angular_rps": -0.0002864171814001004,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 75.5991660116706,
+          "original_panel_name": "mujoco-depth-loss/00120.png"
+        },
+        {
+          "time_s": 12.4,
+          "image_sha256": "750c32596226bd46e2a8c81dd4a7ff9c2cedec0b1d6634b1582f6902f6da4e14",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999999832150887,
+            "angular_rps": 0.000158673775384921,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 67.74975000007544,
+          "original_panel_name": "mujoco-depth-loss/00124.png"
+        },
+        {
+          "time_s": 12.8,
+          "image_sha256": "dd2fa89d6f8ab65679e17777b60c03b2c8a6f94a954bc1eca14275225c07ee43",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.27582774954203154,
+            "angular_rps": 0.00017054472084421235,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 63.056084007257596,
+          "original_panel_name": "mujoco-depth-loss/00128.png"
+        },
+        {
+          "time_s": 13.2,
+          "image_sha256": "c770cda71135f8dd5ea5034ddfb2357f536b9c64e2c0def7037eda1d7c84d42d",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.24551662278399022,
+            "angular_rps": -0.0002776094515253291,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 65.77537499833852,
+          "original_panel_name": "mujoco-depth-loss/00132.png"
+        },
+        {
+          "time_s": 13.6,
+          "image_sha256": "66b581bf46e500266be917024ccab118acff50d2c58bb5a0058cd0f994945aa3",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2185740897003491,
+            "angular_rps": 0.0001390100759708357,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 70.37704200774897,
+          "original_panel_name": "mujoco-depth-loss/00136.png"
+        },
+        {
+          "time_s": 14.0,
+          "image_sha256": "a4e1d4e8c7d85aac0e2251be1c0a8432dcb432fa8de8d7ad7bcdb5bcef269da3",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.19457774784664916,
+            "angular_rps": -0.00017837183337765516,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 59.57216600654647,
+          "original_panel_name": "mujoco-depth-loss/00140.png"
+        },
+        {
+          "time_s": 14.4,
+          "image_sha256": "e76a2e1e86deb902054acb5c73d24ab91045f1bc4ead88e995cd56032cf13c37",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.17322395649342906,
+            "angular_rps": 0.0001778901388493903,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 63.121915998635814,
+          "original_panel_name": "mujoco-depth-loss/00144.png"
+        },
+        {
+          "time_s": 14.8,
+          "image_sha256": "dc410d36f9d5c08f5cfc125ee31c16d3865fdea01fedcda90c136ee0fbe707f9",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.15418972983399298,
+            "angular_rps": 0.0002749391067693452,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 69.64000000152737,
+          "original_panel_name": "mujoco-depth-loss/00148.png"
+        },
+        {
+          "time_s": 15.2,
+          "image_sha256": "8eeedad7a0520005a5c6de85661181c8decbaa516b0087a5c7b52f5e97f068e5",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.1372601497357227,
+            "angular_rps": -0.0002515166511003475,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 65.1720839960035,
+          "original_panel_name": "mujoco-depth-loss/00152.png"
+        },
+        {
+          "time_s": 15.6,
+          "image_sha256": "10d0ef237ba26b136c5925a594946d461ecc711551f8ff708d77c340b00f6fde",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.12221200256575725,
+            "angular_rps": 0.00036055527649914154,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 68.9172920101555,
+          "original_panel_name": "mujoco-depth-loss/00156.png"
+        },
+        {
+          "time_s": 16.0,
+          "image_sha256": "4a6d760a532aa9444981a2ad814996300bfe0c98d2955392516ceb5ad022b5fa",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.10878747064146016,
+            "angular_rps": 0.00014757812382004687,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 62.31074999959674,
+          "original_panel_name": "mujoco-depth-loss/00160.png"
+        },
+        {
+          "time_s": 16.4,
+          "image_sha256": "cbffc8f0d68c80b917b1306297cd64fbc628ae5634849629613bca0887c5a6c9",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.09683694663335209,
+            "angular_rps": 0.000224831550523108,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 69.23087500035763,
+          "original_panel_name": "mujoco-depth-loss/00164.png"
+        },
+        {
+          "time_s": 16.8,
+          "image_sha256": "ed5edbc228046e3a997329af77935e5460619362df5bfb1177d6bf9a7b0bdfd3",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.08621705831055193,
+            "angular_rps": 0.00010975406592894643,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 62.723625000217,
+          "original_panel_name": "mujoco-depth-loss/00168.png"
+        },
+        {
+          "time_s": 17.2,
+          "image_sha256": "4c33dac14df03e23ddabba4cc5ade1dab29b4000b13d03a32a31c12629b8c520",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.07672381365873635,
+            "angular_rps": -0.00034509312205299736,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 68.6409170011757,
+          "original_panel_name": "mujoco-depth-loss/00172.png"
+        },
+        {
+          "time_s": 17.6,
+          "image_sha256": "ae08f6f0229a6031e4e530b6a02db97535edc397c95058c43ef6d1f4d82379d3",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0683160507648007,
+            "angular_rps": -0.0003453198350653608,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 67.30450000031851,
+          "original_panel_name": "mujoco-depth-loss/00176.png"
+        },
+        {
+          "time_s": 18.0,
+          "image_sha256": "1d2fd45bcfe58f615997ba3ace9eb1dbd1eb55bf35b7e45dd8222bcebb4c69a6",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.06081591053582961,
+            "angular_rps": -0.00034302108059591774,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 70.98666600359138,
+          "original_panel_name": "mujoco-depth-loss/00180.png"
+        },
+        {
+          "time_s": 18.4,
+          "image_sha256": "b762a396804540cebd2ceb4428445e0e59e7dafd23fd6b4334540e04ceb89fae",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.054149222447946226,
+            "angular_rps": -0.00019236989210380528,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 66.35216700669844,
+          "original_panel_name": "mujoco-depth-loss/00184.png"
+        },
+        {
+          "time_s": 18.8,
+          "image_sha256": "ad19871f98ea30246ebe292f8981b49a425b594388dae22fb2da09f497f26cdf",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.048193282367219765,
+            "angular_rps": 0.00019496492905846097,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 68.27408299432136,
+          "original_panel_name": "mujoco-depth-loss/00188.png"
+        },
+        {
+          "time_s": 19.2,
+          "image_sha256": "c081e3481c5abe32a4d8e85b69339779c577da3dd986902fcdbeee2084598536",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.04289508197139838,
+            "angular_rps": 1.1100612892223083e-05,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 64.98229199496564,
+          "original_panel_name": "mujoco-depth-loss/00192.png"
+        },
+        {
+          "time_s": 19.6,
+          "image_sha256": "4bffce75b75d1a82acc0af0af67366fcc25d41e6fc52f9381f7668c56ad1706a",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.03818378831680564,
+            "angular_rps": -0.00036368707224521124,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 65.07054199755657,
+          "original_panel_name": "mujoco-depth-loss/00196.png"
+        },
+        {
+          "time_s": 20.0,
+          "image_sha256": "58b7496ba04c78b5967eae416571725efa9d2329e52cdf304f08c87f2ac87ac9",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.033994851191930145,
+            "angular_rps": -5.9558549731386634e-05,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 64.3911249935627,
+          "original_panel_name": "mujoco-depth-loss/00200.png"
+        },
+        {
+          "time_s": 20.4,
+          "image_sha256": "dfb77f2aacbbb7b038c5ec064ff922b8b3e7730e6890ba67ebc4a45014fcff2e",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.03027087689472191,
+            "angular_rps": -7.15166369298359e-05,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 63.11795799410902,
+          "original_panel_name": "mujoco-depth-loss/00204.png"
+        },
+        {
+          "time_s": 20.8,
+          "image_sha256": "c123d00a3c764f80ccdde8e3cd1bdf836aa565174579056356231cb87b7f5fb4",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.0,
+            "state": "stopped",
+            "reason": "observed_goal_reached",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 63.450333997025155,
+          "original_panel_name": "mujoco-depth-loss/00208.png"
+        },
+        {
+          "time_s": 21.2,
+          "image_sha256": "28f54f024a74199081db932cb828228fa72ece004c00944e35ffc1994b5969a1",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.0,
+            "state": "stopped",
+            "reason": "observed_goal_reached",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 71.55304099433124,
+          "original_panel_name": "mujoco-depth-loss/00212.png"
+        },
+        {
+          "time_s": 21.6,
+          "image_sha256": "5ee1df9a1f641f27461ae4840bb4817fb3ab5c152cb5c53c63df48d84383b733",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.0,
+            "state": "stopped",
+            "reason": "observed_goal_reached",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 70.52216699230485,
+          "original_panel_name": "mujoco-depth-loss/00216.png"
+        },
+        {
+          "time_s": 22.0,
+          "image_sha256": "0feed14e2c372638fe493188aa58eab6a47f572e4879168d9deab10dfa0c7ff6",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.0,
+            "state": "stopped",
+            "reason": "observed_goal_reached",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 67.85033299820498,
+          "original_panel_name": "mujoco-depth-loss/00220.png"
+        },
+        {
+          "time_s": 22.4,
+          "image_sha256": "f693011f565a8e34f4bca4a3e7625bbc47e9febc91611bf9a6339d4414e08305",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.0,
+            "state": "stopped",
+            "reason": "observed_goal_reached",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 62.539249993278645,
+          "original_panel_name": "mujoco-depth-loss/00224.png"
+        },
+        {
+          "time_s": 22.8,
+          "image_sha256": "e23c6af72e4454236d560897b12c91a05945998f70231623c08b829e662cbbc6",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.0,
+            "state": "stopped",
+            "reason": "observed_goal_reached",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 59.86983299953863,
+          "original_panel_name": "mujoco-depth-loss/00228.png"
+        }
+      ],
+      "video_sha256": "4d9cf2d53c8e6765c4d44e3275fbff3f7ca8aded01ae27f326d796de0c31cffa"
+    },
+    {
+      "id": "mujoco-occlusion",
+      "label": "MuJoCo controlled simulation: occlusion",
+      "duration_s": 23.0,
+      "processed_source_frames": 230,
+      "source_manifest_sha256": "ca2b67c2e7e3ba4558a017fcd406b964dc369eaf751f14a94c17304362b4b73d",
+      "scene_sha256": "2a59997e7da2d7d51513357809188dfb00e2b4304a0ba22570b1e59348a2ce18",
+      "role": "learned detection/tracking/semantic overlays; simulation command is geometric, not a control-contribution claim",
+      "frames": [
+        {
+          "time_s": 0.0,
+          "image_sha256": "554645b8418d425bcedde5c45dc58f081867e8076ab52ba2139359bfabaecf00",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.3,
+            "angular_rps": 0.0,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 661.0073750052834,
+          "original_panel_name": "mujoco-occlusion/00000.png"
+        },
+        {
+          "time_s": 0.4,
+          "image_sha256": "9c4509ca691190c2977344e79ba2e331001f136a07ab6e0cf912812fce4d92b1",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999999818617845,
+            "angular_rps": 0.0001649464261443967,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 78.71883299958427,
+          "original_panel_name": "mujoco-occlusion/00004.png"
+        },
+        {
+          "time_s": 0.8,
+          "image_sha256": "215a9c263d6b46afdf5f6bac29b48339244d604448c229d9d52297844f5ec922",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999800833357,
+            "angular_rps": -0.0005465802480046911,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 69.01879099314101,
+          "original_panel_name": "mujoco-occlusion/00008.png"
+        },
+        {
+          "time_s": 1.2,
+          "image_sha256": "db65534e1a8719cf45407e76e738af09111389516febe6537622839e955040e2",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999999764248464,
+            "angular_rps": -0.00018804980857622944,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 76.61708300292958,
+          "original_panel_name": "mujoco-occlusion/00012.png"
+        },
+        {
+          "time_s": 1.6,
+          "image_sha256": "03365da87b63b6e4e990fa69dd761c90473c2ff4675b9b4bc3b79965dbe1fa0c",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.299999998603913,
+            "angular_rps": 0.00014471110658309527,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 65.38949999958277,
+          "original_panel_name": "mujoco-occlusion/00016.png"
+        },
+        {
+          "time_s": 2.0,
+          "image_sha256": "c11b87a95b45ba30d189a46ac1c746c8554e83103f028a8930f0971c496ab131",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999999915689035,
+            "angular_rps": -0.00011245730025200018,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 64.62616700446233,
+          "original_panel_name": "mujoco-occlusion/00020.png"
+        },
+        {
+          "time_s": 2.4,
+          "image_sha256": "914de1b6e7a1f125a5ed408e305bc1f5711dc45b8c74e5b08b6ed327fc717ba7",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999997206229,
+            "angular_rps": 6.473527504646803e-05,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 67.5631250051083,
+          "original_panel_name": "mujoco-occlusion/00024.png"
+        },
+        {
+          "time_s": 2.8,
+          "image_sha256": "2c0c9982fcef555922411261eb9fca81529c3e9ae3a68aaa029c633ded30c4a3",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999998345010875,
+            "angular_rps": -0.0004982452920909708,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 68.29654199827928,
+          "original_panel_name": "mujoco-occlusion/00028.png"
+        },
+        {
+          "time_s": 3.2,
+          "image_sha256": "df6cbb6ddca3e85766aaebdddff714109409834ef6a15b6982224a50fced722a",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999999311296033,
+            "angular_rps": -0.0003214118773244845,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 65.74379198718816,
+          "original_panel_name": "mujoco-occlusion/00032.png"
+        },
+        {
+          "time_s": 3.6,
+          "image_sha256": "cdc2f10f7b8ef3cb14738b290514c4d43ff991518b15d4bc523fc04395a3dddd",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999999737609,
+            "angular_rps": 1.9839009650413075e-05,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 71.8920000072103,
+          "original_panel_name": "mujoco-occlusion/00036.png"
+        },
+        {
+          "time_s": 4.0,
+          "image_sha256": "a8b688b01cf598df1ddae02d43a5327586d68b2fa0da9b84d6d2c502cc7376f8",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999998831167424,
+            "angular_rps": 0.00041871814833660537,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 74.35654199798591,
+          "original_panel_name": "mujoco-occlusion/00040.png"
+        },
+        {
+          "time_s": 4.4,
+          "image_sha256": "ca493f63cf9fedf36ec9fefcf89480edaf8c23d8075b857b1b54b93feca95658",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999991797899,
+            "angular_rps": -0.00011091957086017956,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 68.76541700330563,
+          "original_panel_name": "mujoco-occlusion/00044.png"
+        },
+        {
+          "time_s": 4.8,
+          "image_sha256": "763150c3116fba8dc9d02d94abbe48d3fae5bdc90a82ee3b21dfef33e7e6fde0",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999999875899052,
+            "angular_rps": -0.0004314526891591175,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 63.079500003368594,
+          "original_panel_name": "mujoco-occlusion/00048.png"
+        },
+        {
+          "time_s": 5.2,
+          "image_sha256": "73348b57d43cabccd4f3d403c37846552710623872800893075450300f8f9396",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.6,
+            "state": "moving",
+            "reason": "avoid_turn",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 65.95750000269618,
+          "original_panel_name": "mujoco-occlusion/00052.png"
+        },
+        {
+          "time_s": 5.6,
+          "image_sha256": "39bdc32c2f4b356b727f2384b46c85e4d2002fd01ab9e155785442417b57519b",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.6,
+            "state": "moving",
+            "reason": "avoid_turn",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 69.61858399154153,
+          "original_panel_name": "mujoco-occlusion/00056.png"
+        },
+        {
+          "time_s": 6.0,
+          "image_sha256": "c4b897cefa404d46d329026383f1e90496b0ae7e0b77c06e42e4be3f6bdd0d24",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.6,
+            "state": "moving",
+            "reason": "avoid_turn",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 65.88850000116508,
+          "original_panel_name": "mujoco-occlusion/00060.png"
+        },
+        {
+          "time_s": 6.4,
+          "image_sha256": "f7da9a9b8562925be7966387429f5a53e6f32dde75720a16b0a253c16c80489d",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.6,
+            "state": "moving",
+            "reason": "avoid_turn",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 68.99312499444932,
+          "original_panel_name": "mujoco-occlusion/00064.png"
+        },
+        {
+          "time_s": 6.8,
+          "image_sha256": "24231258505cf7a1df22b89a72e0f61cab5bbd258b26608900c20cbc526a5470",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.22,
+            "angular_rps": -0.004160083444190832,
+            "state": "moving",
+            "reason": "avoid_bypass",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 67.76725000236183,
+          "original_panel_name": "mujoco-occlusion/00068.png"
+        },
+        {
+          "time_s": 7.2,
+          "image_sha256": "546bdfc76fcf1f9d9c04335c38237266c0d20a9eb2edd195a7ff2380d1925cd0",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.6,
+            "state": "moving",
+            "reason": "obstacle_stop_and_turn",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 56.96704199363012,
+          "original_panel_name": "mujoco-occlusion/00072.png"
+        },
+        {
+          "time_s": 7.6,
+          "image_sha256": "1704d841bda85f4711e69c76b40ec9f13fa74f4bbf584d55c5c9dcc3398ec1e6",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.6,
+            "state": "moving",
+            "reason": "avoid_turn",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 59.93945899535902,
+          "original_panel_name": "mujoco-occlusion/00076.png"
+        },
+        {
+          "time_s": 8.0,
+          "image_sha256": "fb60e54a60dc5609f49db105dc2520470f68ac576ff3c686e27d62582681436b",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.6,
+            "state": "moving",
+            "reason": "avoid_turn",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 59.86395799845923,
+          "original_panel_name": "mujoco-occlusion/00080.png"
+        },
+        {
+          "time_s": 8.4,
+          "image_sha256": "30970d86ec240a444329e1292a1d97c842ed23ecac2280628e29cb34ab669e8e",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": 0.6,
+            "state": "moving",
+            "reason": "avoid_turn",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 57.82333399110939,
+          "original_panel_name": "mujoco-occlusion/00084.png"
+        },
+        {
+          "time_s": 8.8,
+          "image_sha256": "b09d44fcc6d7984210944bc6673ed388443e1d6f6f21580a838fe2f805f8ebc7",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.22,
+            "angular_rps": -0.0031155438213836817,
+            "state": "moving",
+            "reason": "avoid_bypass",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 65.97333301033359,
+          "original_panel_name": "mujoco-occlusion/00088.png"
+        },
+        {
+          "time_s": 9.2,
+          "image_sha256": "0b41f876240d2ebb2a7b7d1f9297aa9f7a732e221910cbee87254b4edccbcf13",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.22,
+            "angular_rps": -0.0027229208123111803,
+            "state": "moving",
+            "reason": "avoid_bypass",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 64.55529200320598,
+          "original_panel_name": "mujoco-occlusion/00092.png"
+        },
+        {
+          "time_s": 9.6,
+          "image_sha256": "11dc7cfced08c9c565f6a062e0a74a80ba0c6fc7509df526a6ba37995de7a514",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.22,
+            "angular_rps": -0.001516916275684732,
+            "state": "moving",
+            "reason": "avoid_bypass",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 65.75249999877997,
+          "original_panel_name": "mujoco-occlusion/00096.png"
+        },
+        {
+          "time_s": 10.0,
+          "image_sha256": "9d931dce083a706353e6e5d6e000b6c625c4efb0b4d9a1007866bdaea446a890",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.22,
+            "angular_rps": -0.0015437541222644846,
+            "state": "moving",
+            "reason": "avoid_bypass",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 65.19800001115073,
+          "original_panel_name": "mujoco-occlusion/00100.png"
+        },
+        {
+          "time_s": 10.4,
+          "image_sha256": "386b71692e394fb89403b510fd52288519abe8ab3c923acd5cb7da8ad7fcb18f",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.22,
+            "angular_rps": -0.00048375118287546925,
+            "state": "moving",
+            "reason": "avoid_bypass",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 66.89291700604372,
+          "original_panel_name": "mujoco-occlusion/00104.png"
+        },
+        {
+          "time_s": 10.8,
+          "image_sha256": "799c3bc214827763dc5a37094f5c1b7f9636070226fbb9d28d21ad71c0c97286",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.22,
+            "angular_rps": -0.00018686069106310654,
+            "state": "moving",
+            "reason": "avoid_bypass",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 67.69966598949395,
+          "original_panel_name": "mujoco-occlusion/00108.png"
+        },
+        {
+          "time_s": 11.2,
+          "image_sha256": "bb75d67bb90b90b4f4b0601b15219ac121294c2bc4180fad0dd6fcb1164f1417",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.22,
+            "angular_rps": -0.00026989415222322677,
+            "state": "moving",
+            "reason": "avoid_bypass",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 69.21920900640544,
+          "original_panel_name": "mujoco-occlusion/00112.png"
+        },
+        {
+          "time_s": 11.6,
+          "image_sha256": "3643c82a0c3c3a74099ae827e192728251dff1b81b6c02a4cc469d135ce2d483",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.22,
+            "angular_rps": 8.068112506753877e-05,
+            "state": "moving",
+            "reason": "avoid_bypass",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 68.75908399524633,
+          "original_panel_name": "mujoco-occlusion/00116.png"
+        },
+        {
+          "time_s": 12.0,
+          "image_sha256": "79c0c7e6249db4f5eb81e0d1a91bbc073a2fa177ba75391b955572652e77822d",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.22,
+            "angular_rps": -0.00035056591795878944,
+            "state": "moving",
+            "reason": "avoid_bypass",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 60.09537499630824,
+          "original_panel_name": "mujoco-occlusion/00120.png"
+        },
+        {
+          "time_s": 12.4,
+          "image_sha256": "c8bf4214cd58b7159a256475b07161b9142ef9d97211bdbff4ad0a7f3addaab5",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.22,
+            "angular_rps": 0.0001215029943684165,
+            "state": "moving",
+            "reason": "avoid_bypass",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 68.67562500701752,
+          "original_panel_name": "mujoco-occlusion/00124.png"
+        },
+        {
+          "time_s": 12.8,
+          "image_sha256": "7f16aff702394db55917872bb636c74c0c4abe01c6e46d7a2c7af59baecf86e8",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.22,
+            "angular_rps": 0.00014493891710554152,
+            "state": "moving",
+            "reason": "avoid_bypass",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 65.98416600900237,
+          "original_panel_name": "mujoco-occlusion/00128.png"
+        },
+        {
+          "time_s": 13.2,
+          "image_sha256": "76c93244e515ad564a8eeca0f5a1860cb3de22ece5ed6750eef957f7d0b46b4d",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.22,
+            "angular_rps": -0.00028812628846530686,
+            "state": "moving",
+            "reason": "avoid_bypass",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 65.52062500850298,
+          "original_panel_name": "mujoco-occlusion/00132.png"
+        },
+        {
+          "time_s": 13.6,
+          "image_sha256": "bea9bacd52214f9c1075d0def3453b19e825102739f02c1d581e4409e8dd197e",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": -0.6,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 67.75337499857415,
+          "original_panel_name": "mujoco-occlusion/00136.png"
+        },
+        {
+          "time_s": 14.0,
+          "image_sha256": "1d0dfcee25f372fafda28557ab7941ac1401d45784e9825e790decb2109038d9",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": -0.6,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 98.12858299119398,
+          "original_panel_name": "mujoco-occlusion/00140.png"
+        },
+        {
+          "time_s": 14.4,
+          "image_sha256": "c637aef99f820a9a9eafc6da9096655413700e5f9204a696d90478d13daf3165",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": -0.6,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 97.81012499297503,
+          "original_panel_name": "mujoco-occlusion/00144.png"
+        },
+        {
+          "time_s": 14.8,
+          "image_sha256": "068abb1ef02185e8e1b828fbe36732507b947a71898ac04343e69d0740019e50",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": -0.6,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 67.00037501286715,
+          "original_panel_name": "mujoco-occlusion/00148.png"
+        },
+        {
+          "time_s": 15.2,
+          "image_sha256": "66de07d4b46e1ecc1f17e8ba7a589a110127fe4ea024e27cd71a9a0f417294c6",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": -0.6,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 72.96825000958052,
+          "original_panel_name": "mujoco-occlusion/00152.png"
+        },
+        {
+          "time_s": 15.6,
+          "image_sha256": "2ae3d885c015641c4b4f92e9654dbed77e4e2e67bc7e8bf3f60e0ad3e160142f",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.0,
+            "angular_rps": -0.6,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 66.03066700336058,
+          "original_panel_name": "mujoco-occlusion/00156.png"
+        },
+        {
+          "time_s": 16.0,
+          "image_sha256": "b85192cc99312845d67e4965401c17375ffe9075920d8bae6a86c42c75dc40ac",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.25159302170911896,
+            "angular_rps": -0.6,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 68.18337499862537,
+          "original_panel_name": "mujoco-occlusion/00160.png"
+        },
+        {
+          "time_s": 16.4,
+          "image_sha256": "4cbc6e5520bb93d2f10520d89804bba3ec9d006de85bb466dcef92d436c04e9f",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2775705234760057,
+            "angular_rps": -0.5837123784112417,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 73.28754100308288,
+          "original_panel_name": "mujoco-occlusion/00164.png"
+        },
+        {
+          "time_s": 16.8,
+          "image_sha256": "4de5bd3e8667326c3defb533aaf1594258fd67d58485b275103f40f65cc741b0",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2917610746305769,
+            "angular_rps": -0.3523545457043584,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 66.0176249948563,
+          "original_panel_name": "mujoco-occlusion/00168.png"
+        },
+        {
+          "time_s": 17.2,
+          "image_sha256": "85e2fbcdf8fed60bf65df14db43b93d0fbbda9c5ad81e64ef88ec4a6f487dea9",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2968677083175114,
+            "angular_rps": -0.21694783721648347,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 62.15525000880007,
+          "original_panel_name": "mujoco-occlusion/00172.png"
+        },
+        {
+          "time_s": 17.6,
+          "image_sha256": "bca24685839266bb732e4a5e7a34857835dbca7fdd17ec9c52c555fb77a9b250",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2987701592473417,
+            "angular_rps": -0.13586842651089048,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 64.06233301095199,
+          "original_panel_name": "mujoco-occlusion/00176.png"
+        },
+        {
+          "time_s": 18.0,
+          "image_sha256": "16ab1ce2b937ec8da9b3adf9bcffdae7638446d5506cf6d8da426e2f05e36a2d",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29950486422086176,
+            "angular_rps": -0.08619211438436003,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 61.01091600430664,
+          "original_panel_name": "mujoco-occlusion/00180.png"
+        },
+        {
+          "time_s": 18.4,
+          "image_sha256": "0c366f02a531987da540ecefb569a999054d2e637258ec0d0586a2e64820deb6",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29979982459174453,
+            "angular_rps": -0.05479931661566284,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 64.58704199758358,
+          "original_panel_name": "mujoco-occlusion/00184.png"
+        },
+        {
+          "time_s": 18.8,
+          "image_sha256": "6376db1eecb55c72793aeb011575060a9756d1f9e0fc361c34b89c6b3d0a411d",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999198243415469,
+            "angular_rps": -0.03467979885201977,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 64.28783299634233,
+          "original_panel_name": "mujoco-occlusion/00188.png"
+        },
+        {
+          "time_s": 19.2,
+          "image_sha256": "52605fb0456f5c40ad0859e267571f19e702220c91756d2ec3e278b72b438b29",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999667037717168,
+            "angular_rps": -0.02234843760038485,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 61.07891700230539,
+          "original_panel_name": "mujoco-occlusion/00192.png"
+        },
+        {
+          "time_s": 19.6,
+          "image_sha256": "839a8c91beedbd1515ea4c00655a1b77e61d693dbe92082cbdc65708935001cf",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999854728518358,
+            "angular_rps": -0.014761740450765615,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 61.07154100027401,
+          "original_panel_name": "mujoco-occlusion/00196.png"
+        },
+        {
+          "time_s": 20.0,
+          "image_sha256": "a26440803f9b0e291dde93a88ec379fb8b6387a76a31b23273c8a662ebdd79eb",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999941327953298,
+            "angular_rps": -0.009381276934451677,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 61.15162500645965,
+          "original_panel_name": "mujoco-occlusion/00200.png"
+        },
+        {
+          "time_s": 20.4,
+          "image_sha256": "7f8c7bd30baf8fafc4e5c9e1a3d8fee2152cc468293c575f272b8350cf67d665",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999974810028429,
+            "angular_rps": -0.006146951295938452,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 66.19083299301565,
+          "original_panel_name": "mujoco-occlusion/00204.png"
+        },
+        {
+          "time_s": 20.8,
+          "image_sha256": "18efd290973e7d3e2085dd2866bdd73c15c9dc6c65889c994fe31027f7cdda80",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999887050741997,
+            "angular_rps": -0.004116114591611986,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 63.620707995141856,
+          "original_panel_name": "mujoco-occlusion/00208.png"
+        },
+        {
+          "time_s": 21.2,
+          "image_sha256": "628faec5198cc4d196a95a5d72f57bc22f2cdd8e383262ba84004b6f4777caf7",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2999995781935691,
+            "angular_rps": -0.0025153723274473627,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 64.97791699075606,
+          "original_panel_name": "mujoco-occlusion/00212.png"
+        },
+        {
+          "time_s": 21.6,
+          "image_sha256": "40824443bea07746d136228356e1723ac24e7b4937af6dba803bfd7a2fd3e841",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.29999980763190376,
+            "angular_rps": -0.0016986823574813847,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 68.50520899752155,
+          "original_panel_name": "mujoco-occlusion/00216.png"
+        },
+        {
+          "time_s": 22.0,
+          "image_sha256": "b22fb4a04316d9e42b08e2df72c5507e7670e8197aa08789429e5d83a5c1521c",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.2872427510676462,
+            "angular_rps": -0.0014757253117556601,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 64.49049999355339,
+          "original_panel_name": "mujoco-occlusion/00220.png"
+        },
+        {
+          "time_s": 22.4,
+          "image_sha256": "2c6e827b2bd9ca1b39a5dcde981c6d52726588f928a98967be21744b8ce2dea8",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.25570588067887273,
+            "angular_rps": -0.0012711071854363265,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 60.90191699331626,
+          "original_panel_name": "mujoco-occlusion/00224.png"
+        },
+        {
+          "time_s": 22.8,
+          "image_sha256": "614644313d0270fd895b8aa7f4c278df3c50f95ec35c6d133be49ecedb195bbf",
+          "depth_available": true,
+          "command": {
+            "linear_mps": 0.22761279981022442,
+            "angular_rps": -0.0007987711751606952,
+            "state": "moving",
+            "reason": "goal_tracking",
+            "safety_stop": false
+          },
+          "observed_result_rpc_ms": 63.53733300056774,
+          "original_panel_name": "mujoco-occlusion/00228.png"
+        }
+      ],
+      "video_sha256": "3ceaadb88a2e73449aae343d0ed6b2a5dad2057c8660c9a5fd3b534d760795bf"
+    }
+  ],
+  "speed": 1,
+  "full_source_frames_per_chapter": 230,
+  "visible_panels_per_chapter": 58,
+  "public_media_scope": "MP4 and GIF derived from original saved panels. Individual PNGs and the byte-identical embedded panel player remain in the local authoring workspace."
+}

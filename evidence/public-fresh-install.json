@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-16",
+  "scope": "Fresh non-editable install of public SDK and independent Bench in a newly created local venv. Fixture integration only; no learned model, research corpus, ROS2, MPS, or fresh Lab install is claimed.",
+  "python": "Python 3.12.13",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "packages": [
+    {
+      "name": "numpy",
+      "version": "2.5.4"
+    },
+    {
+      "name": "opencv-python-headless",
+      "version": "5.0.0.93"
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0"
+    },
+    {
+      "name": "pip",
+      "version": "26.1.2"
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2"
+    },
+    {
+      "name": "robot-model-sdk",
+      "version": "0.2.0"
+    },
+    {
+      "name": "robot-reliability-bench",
+      "version": "0.2.0"
+    },
+    {
+      "name": "scipy",
+      "version": "1.18.1"
+    }
+  ],
+  "install_exit_code": 0,
+  "pip_check_exit_code": 0,
+  "replay_exit_code": 0,
+  "installed_site_packages_imports_confirmed": true,
+  "checks": {
+    "offline_deterministic": true,
+    "duplicate_counted": true,
+    "out_of_order_counted": true,
+    "bounded_queue": true,
+    "overflow_observed": true,
+    "rgb_with_missing_depth": true,
+    "inference_errors_counted": true
+  },
+  "fixture_sha256": "3174b2c4fd680a99bd2b700875b473b34cc5a3ec1a44c332c552c7d41a1a654b",
+  "install_log_sha256": "73fac9463b7472030699217c43cffa5a4326d3fbd5a3314e543b068056fbd848",
+  "commands": [
+    "python3.12 -m venv .venv",
+    ".venv/bin/python -m pip install ./packages/robot_model_sdk ./packages/robot_reliability_bench",
+    ".venv/bin/python -m pip check",
+    ".venv/bin/robotbench replay-test --output local-output/replay"
+  ],
+  "historical_experiment_versions_replaced": false
+}

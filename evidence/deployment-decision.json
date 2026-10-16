@@ -1,0 +1,42 @@
+{
+  "status": "verified",
+  "generated_utc": "2026-10-14T20:35:58.906700+00:00",
+  "default_model": "models/v2/semantic-S3-seed42",
+  "native_default_preserved": true,
+  "strict_FP32_parity_passed": false,
+  "strict_tolerance": {
+    "rtol": 0.0001,
+    "atol": 1e-05
+  },
+  "validation_allclose_frames_passed": 0,
+  "validation_allclose_frames_total": 142,
+  "INT8_validation_accuracy_passed": false,
+  "INT8_validation_miou_loss": 0.030311026315199635,
+  "maximum_allowed_miou_loss": 0.01,
+  "INT8_predeclared_ONNX_CPU4_p95_passed": false,
+  "predeclared_p95_comparator": "ONNX FP32, CPU intra-op4, clean validation; not fastest-thread selection",
+  "INT8_p95_ms": 46.2404518,
+  "ONNX_FP32_p95_ms": 45.081185749999996,
+  "INT8_relative_ONNX_FP32_p95_change_percent": 2.5715074497569157,
+  "native_CPU4_p95_ms": 158.23086455,
+  "INT8_relative_native_CPU4_p95_change_percent": -70.77659157617235,
+  "default_INT8_eligible": false,
+  "experimental_benchmark_only": true,
+  "test_labels_used_for_gate": false,
+  "evidence": {
+    "reports/v2/optimization/final-export-acceptance.json": "1084716496ce149398a435805841f9650db6824e760d4e7f0a5e580f52cb9ba0",
+    "reports/v2/optimization/final-default-decision/int8-default-decision.json": "b7ad17f2e6fd257cb36d443cd080fdf29bba2dfe5108a1b649c93769c56f0037",
+    "reports/v2/bench/final-quiet-semantic-matrix/semantic-S3-seed42-native-cpu-threads4/20261014T170547Z-308c9966/summary.json": "e3b85ec09ab256676582b7b376e61011b07d3268548aad48296bbfc63c3099a7"
+  },
+  "graph_sizes_bytes": {
+    "FP32": 12777020,
+    "INT8": 3696403
+  },
+  "native_checkpoint_bytes": 12985587,
+  "limitations": [
+    "Strict numerical parity is a separate gate from near-identical argmax task scores.",
+    "INT8 p95 regression is relative to ONNX FP32; INT8 is substantially faster than native CPU4.",
+    "Derived ONNX packs retain native weights for provenance, so complete package size exceeds graph size.",
+    "Mac profiles do not measure target embedded power, thermals or latency."
+  ]
+}

@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "indoor-perception-lab"
+version = "0.2.0"
+requires-python = ">=3.12"
+dependencies = ["robot-model-sdk==0.2.0", "torch", "torchvision", "numpy", "opencv-python-headless", "scipy", "Pillow", "h5py", "pycocotools"]
+[project.scripts]
+iplab = "indoor_perception_lab.cli:main"
+[tool.setuptools.packages.find]
+where = ["src"]

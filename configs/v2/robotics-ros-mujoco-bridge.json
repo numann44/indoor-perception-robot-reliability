@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "scope": "Separate real DDS closed-loop integration proof; existing scenario controllers and simulator unchanged",
+  "pilot_seed": 42,
+  "scenario": "clear",
+  "clean_duration_wall_s": 30,
+  "fault_duration_wall_s": 35,
+  "physics_tick_sim_s": 0.1,
+  "physics_step_s": 0.005,
+  "worker_queue_capacity": 2,
+  "inflight_workers": 1,
+  "control_tick_wall_s": 0.05,
+  "actuator_command_timeout_ms": 250,
+  "perception_age_stop_ms": 300,
+  "maximum_linear_mps": 0.3,
+  "maximum_angular_rps": 0.6,
+  "forward_stop_distance_m": 0.8,
+  "faults": {
+    "depth_loss_sim_s": [3, 5],
+    "slow_worker_sim_s": [8, 10],
+    "slow_worker_actual_sleep_ms": 400,
+    "inference_process_exit_wall_s": 6,
+    "inference_process_restart_wall_s": 7.5,
+    "consumer_process_exit_wall_s": 12,
+    "consumer_process_restart_wall_s": 13.5
+  },
+  "timestamp": "Capture start system ns retained through render, IPC and DDS; simulation clock separately preserved",
+  "physical_actuation": false
+}

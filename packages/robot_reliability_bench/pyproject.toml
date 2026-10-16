@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robot-reliability-bench"
+version = "0.2.0"
+description = "Independent, reproducible robot model inference and replay reliability measurements"
+requires-python = ">=3.12"
+dependencies = ["robot-model-sdk==0.2.0", "numpy>=2", "psutil>=6", "Pillow>=11", "scipy>=1.13"]
+
+[project.optional-dependencies]
+native = ["robot-model-sdk[torch]==0.2.0"]
+onnx = ["robot-model-sdk[onnx]==0.2.0"]
+robotics = ["mujoco==3.15.0", "rosbags==0.11.7"]
+coco = ["pycocotools>=2.0.7"]
+plots = ["matplotlib>=3.9"]
+
+[project.scripts]
+robotbench = "robot_reliability_bench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

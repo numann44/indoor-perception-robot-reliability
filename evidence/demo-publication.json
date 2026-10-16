@@ -1,0 +1,32 @@
+{
+  "path": "demo/portfolio-demo.mp4",
+  "bytes": 2827988,
+  "sha256": "501bbb389b49b3a2d10e0c6fff0580d82f2f0e8ae22b2cb96a20f816d7dc80b6",
+  "git_blob_sha": "c3678055f8663098a81575100b54d6885e249480",
+  "duration_s": 78.0,
+  "video": {
+    "codec_name": "h264",
+    "width": 1280,
+    "height": 720,
+    "r_frame_rate": "24/1"
+  },
+  "render_exit_code": 0,
+  "render_log_sha256": "5dcd96037ceb8b81dabeb0c2fe2fc31b31671f8a7331f3e489eff811ecfa40e5",
+  "hyperframes_version": "0.8.164",
+  "final_check": "PASS; zero lint errors/warnings; layout/runtime passed; 43/43 contrast checks",
+  "actual_encoded_frames_visually_reviewed_s": [
+    5,
+    14,
+    20,
+    30,
+    41,
+    50,
+    63,
+    74
+  ],
+  "source_time_progression_visible": true,
+  "third_party_dataset_footage_included": false,
+  "new_model_inference_for_publication": false,
+  "source_simulation_controller": "geometric; learned outputs shown as shadow observations",
+  "compiler_warning_review": "Sparse source GOP warning retained in local render log; encoded frame checks show distinct progressing source timestamps and sensor states."
+}

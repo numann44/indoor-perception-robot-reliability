@@ -1,0 +1,55 @@
+{
+  "scope": "Historical original-workspace executed verification excerpt; not a fresh full-corpus public-export run",
+  "status": "passed",
+  "source_report_sha256": "30d73baf15bfbd2c432652e445c20c85ec4a1ba90382879df609dc13902fd496",
+  "main_tests": 212,
+  "subtests": 6,
+  "robotics_tests": 32,
+  "checks": {
+    "main-regression": {
+      "verified": true,
+      "exit_code": 0,
+      "seconds": 13.067768583001452
+    },
+    "pip-check": {
+      "verified": true,
+      "exit_code": 0,
+      "seconds": 0.19111441700079013
+    },
+    "robot-contracts": {
+      "verified": true,
+      "exit_code": 0,
+      "seconds": 3.102979458999471
+    },
+    "ros-runtime": {
+      "verified": true,
+      "exit_code": 0,
+      "seconds": 1.8462427080085035
+    },
+    "simulation-geometry": {
+      "verified": true,
+      "exit_code": 0,
+      "seconds": 0.35442487501131836
+    },
+    "selected-model-identities": {
+      "verified": true
+    },
+    "command-evidence": {
+      "verified": true
+    },
+    "independent-packages": {
+      "verified": true
+    },
+    "budget": {
+      "verified": true
+    },
+    "v1-artifacts-preserved": {
+      "verified": true
+    },
+    "current-source-binding": {
+      "verified": true
+    }
+  },
+  "source_unchanged_during_execution": true,
+  "exact_source_files": 170
+}

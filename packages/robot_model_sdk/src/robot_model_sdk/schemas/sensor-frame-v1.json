@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SensorFrameV1 metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "sample_id",
+    "timestamp_ns",
+    "rgb_shape",
+    "depth_available",
+    "calibration",
+    "T_world_camera",
+    "pose_source"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "sample_id": {
+      "type": "string"
+    },
+    "timestamp_ns": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "rgb_shape": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "depth_available": {
+      "type": "boolean"
+    },
+    "calibration": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "T_world_camera": {
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "pose_source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

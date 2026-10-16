@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PerceptionResultV1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "sample_id": {
+      "type": "string"
+    },
+    "timestamp_ns": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string"
+    },
+    "pose_source": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "detections": {
+      "type": "array"
+    },
+    "tracks": {
+      "type": "array"
+    },
+    "semantic_shape": {
+      "type": [
+        "array",
+        "null"
+      ]
+    },
+    "semantic_mask_path": {
+      "type": "string"
+    },
+    "map": {
+      "type": "object"
+    },
+    "latency_ms": {
+      "type": "number"
+    },
+    "detector_timings_ms": {
+      "type": "object"
+    },
+    "schema_version": {
+      "const": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "sample_id",
+    "timestamp_ns",
+    "status",
+    "tracks",
+    "latency_ms"
+  ]
+}

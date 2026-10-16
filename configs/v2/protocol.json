@@ -1,0 +1,44 @@
+{
+  "protocol_id": "quality-v2",
+  "started_utc": "2026-10-14T07:45:34Z",
+  "deadline_utc": "2026-10-15T07:45:34Z",
+  "baseline_commit": "4a7915c",
+  "branch": "codex/quality-v2",
+  "project_limit_bytes": 40000000000,
+  "download_limit_bytes": 40000000000,
+  "minimum_free_bytes": 15000000000,
+  "devices": [
+    "mac_cpu",
+    "mac_mps_if_model_validated"
+  ],
+  "test_selection_forbidden": true,
+  "evaluation": {
+    "primary_seed": 42,
+    "repeated_seeds": [42,43,44],
+    "quality_gate_policy": "primary seed42 chosen before test; repeat mean/sample SD reported without test-based seed selection"
+  },
+  "training": {
+    "epochs": 30,
+    "max_steps": 6000,
+    "batch_size": 2,
+    "optimizer": "AdamW",
+    "patience": 5,
+    "minimum_epochs": 3,
+    "seeds": [
+      42,
+      43,
+      44
+    ]
+  },
+  "quality_targets": {
+    "nyu_mIoU": 0.2,
+    "nyu_improvement_vs_v1": 0.05,
+    "jaad_AP": 0.1,
+    "jaad_improvement_vs_coco": 0.03,
+    "mot17_AP50": 0.35,
+    "mot17_IDF1": 0.4,
+    "forecast_ADE_ratio_vs_LS_CV": 0.95,
+    "simulation_clean_goal_rate": 0.9,
+    "simulation_unexpected_contacts": 0
+  }
+}

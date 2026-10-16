@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "robot-model-sdk"
+version = "0.2.0"
+description = "Typed local inference contracts for an independent robotics research portfolio"
+requires-python = ">=3.12"
+dependencies = ["numpy", "Pillow", "opencv-python-headless"]
+[project.optional-dependencies]
+torch = ["torch", "torchvision", "opencv-python-headless"]
+onnx = ["onnxruntime"]
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+robot_model_sdk = ["schemas/*.json"]

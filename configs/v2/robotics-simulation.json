@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "scenarios": [
+    "clear",
+    "static_obstacle",
+    "crossing_actor",
+    "occlusion",
+    "depth_loss",
+    "slow_inference"
+  ],
+  "seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109
+  ],
+  "episode_seconds": 35,
+  "control_period_seconds": 0.1,
+  "maximum_linear_mps": 0.3,
+  "maximum_angular_rps": 0.6,
+  "stop_distance_m": 0.8,
+  "result_age_stop_ms": 300,
+  "observed_goal_radius_m": 0.1,
+  "evaluator_goal_radius_m": 0.35,
+  "clean_success_acceptance": 0.9,
+  "controller_inputs": [
+    "rendered registered RGB-D",
+    "calibration and fixed mount/gravity",
+    "wheel encoder odometry",
+    "causal perception timestamp",
+    "requested goal"
+  ],
+  "evaluator_only": [
+    "physics pose",
+    "actor/static geometry",
+    "contact events",
+    "true goal distance"
+  ],
+  "slow_inference": "controlled causal 400ms virtual result delay; actual backend stalls measured in ROS IPC separately",
+  "learned_contribution": "separate shadow/matched policy report; geometric safety cannot be claimed as neural contribution",
+  "excluded_pilot_seeds": [
+    42
+  ],
+  "sensor_noise": {
+    "wheel_encoder_sigma_rad": 0.0005,
+    "depth_sigma_m": 0.001
+  },
+  "actor_seed_variation": {
+    "initial_y_uniform_m": [
+      -0.1,
+      0.1
+    ],
+    "speed_uniform_mps": [
+      -0.025,
+      0.025
+    ]
+  }
+}

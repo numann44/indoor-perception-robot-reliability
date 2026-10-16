@@ -1,0 +1,18 @@
+{
+  "scope": "Fresh copied public SDK/Bench source using existing isolated Bench dependencies; no learned-model inference or corpus. Not a fresh dependency installation.",
+  "status": "passed",
+  "fixture_checks": {
+    "offline_deterministic": true,
+    "duplicate_counted": true,
+    "out_of_order_counted": true,
+    "bounded_queue": true,
+    "overflow_observed": true,
+    "rgb_with_missing_depth": true,
+    "inference_errors_counted": true
+  },
+  "full_local_fixture_report_sha256": "1f224e86f0786cf985e7df9118e4340df616bc7ea5e5ce00f7f651aeeaa79691",
+  "python_sources_parse": 146,
+  "private_path_credential_contact_scan_findings": [],
+  "data_model_files_exported": false,
+  "email_or_cv_exported_to_public_repo": false
+}
